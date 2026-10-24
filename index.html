@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>今日待办 · 看板</title>
+<style>
+  :root{
+    --bg:#0d1117; --card:#161b22; --border:#30363d; --text:#e6edf3;
+    --muted:#8b949e; --p0:#f85149; --p1:#d29922; --p2:#3fb950;
+    --doing:#58a6ff; --done:#8b949e; --blocked:#a371f7;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);
+    font:15px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+    padding:16px;max-width:1400px;margin:0 auto}
+  header{margin-bottom:20px;padding-bottom:14px;border-bottom:1px solid var(--border)}
+  h1{font-size:20px;font-weight:600;letter-spacing:.3px}
+  .meta{color:var(--muted);font-size:12px;margin-top:6px;display:flex;gap:16px;flex-wrap:wrap}
+  .lanes{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+  .lane{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:14px}
+  .lane h2{font-size:15px;font-weight:600;margin-bottom:2px;display:flex;align-items:center;gap:8px}
+  .lane .sub{color:var(--muted);font-size:12px;margin-bottom:12px}
+  .count{background:var(--border);color:var(--text);font-size:11px;
+    padding:1px 7px;border-radius:10px;font-weight:500}
+  .task{border-left:3px solid var(--border);padding:10px 0 10px 11px;margin-bottom:10px;
+    border-radius:0 4px 4px 0;transition:.15s}
+  .task:hover{background:#1c2128}
+  .task.p0{border-left-color:var(--p0)} .task.p1{border-left-color:var(--p1)} .task.p2{border-left-color:var(--p2)}
+  .task.done{opacity:.5}
+  .task.done .t-title{text-decoration:line-through}
+  .t-top{display:flex;align-items:flex-start;gap:8px;margin-bottom:4px}
+  .t-title{font-size:14px;font-weight:500;flex:1}
+  .badge{font-size:10px;padding:1px 6px;border-radius:3px;white-space:nowrap;font-weight:600}
+  .b-p0{background:rgba(248,81,73,.15);color:var(--p0)}
+  .b-p1{background:rgba(210,153,34,.15);color:var(--p1)}
+  .b-p2{background:rgba(63,185,80,.15);color:var(--p2)}
+  .b-you{background:rgba(88,166,255,.15);color:var(--doing)}
+  .b-me{background:rgba(163,113,247,.15);color:var(--blocked)}
+  .b-doing{background:rgba(88,166,255,.2);color:var(--doing)}
+  .b-blocked{background:rgba(163,113,247,.2);color:var(--blocked)}
+  .why{color:var(--muted);font-size:12.5px;margin:5px 0}
+  .foot{display:flex;gap:12px;flex-wrap:wrap;font-size:11px;color:var(--muted);margin-top:6px}
+  .foot code{background:#0d1117;padding:1px 5px;border-radius:3px;font-size:10.5px}
+  .note{color:var(--blocked);font-size:11.5px;margin-top:4px}
+  footer{margin-top:24px;padding-top:14px;border-top:1px solid var(--border);
+    color:var(--muted);font-size:11.5px;text-align:center}
+  .empty{color:var(--muted);font-size:12.5px;font-style:italic}
+</style>
+</head>
+<body>
+<header>
+  <h1>今日待办 · 看板</h1>
+  <div class="meta">
+    <span id="updated">加载中…</span>
+    <span id="summary"></span>
+  </div>
+</header>
+<main class="lanes" id="lanes"></main>
+<footer>数据源 <code>tasks.json</code> · 我改 JSON 你刷新即见</footer>
+<script>
+const STATUS = {todo:'待办', doing:'进行中', done:'已完成', blocked:'卡住'};
+function el(tag, cls, txt){const e=document.createElement(tag); if(cls)e.className=cls; if(txt!=null)e.textContent=txt; return e;}
+
+fetch('tasks.json?t=' + Date.now())
+  .then(r=>r.json())
+  .then(render)
+  .catch(e=>{
+    document.getElementById('lanes').innerHTML =
+      '<p class="empty">读取失败：' + e.message + '</p>';
+  });
+
+function render(data){
+  const upd = document.getElementById('updated');
+  upd.textContent = '更新于 ' + (data.updated || '未知') + (data.updated_note ? ' · ' + data.updated_note : '');
+
+  const lanes = document.getElementById('lanes');
+  lanes.innerHTML = '';
+  let total = 0, done = 0;
+
+  data.lanes.forEach(lane=>{
+    const box = el('div','lane');
+    const h = el('h2');
+    h.appendChild(document.createTextNode(lane.title));
+    const pending = lane.tasks.filter(t=>t.status!=='done').length;
+    h.appendChild(el('span','count', pending));
+    box.appendChild(h);
+    box.appendChild(el('div','sub', lane.subtitle || ''));
+
+    if(!lane.tasks.length) box.appendChild(el('p','empty','（空）'));
+
+    lane.tasks.forEach(t=>{
+      total++; if(t.status==='done') done++;
+      const task = el('div','task ' + (t.priority||'').toLowerCase() + (t.status==='done'?' done':''));
+      const top = el('div','t-top');
+      top.appendChild(el('span','t-title', t.title));
+      top.appendChild(el('span','badge b-'+(t.priority||'').toLowerCase(), t.priority||''));
+      top.appendChild(el('span','badge '+(t.owner==='我'?'b-me':'b-you'), t.owner||''));
+      if(t.status==='doing') top.appendChild(el('span','badge b-doing','进行中'));
+      if(t.status==='blocked') top.appendChild(el('span','badge b-blocked','卡住'));
+      if(t.status==='done') top.appendChild(el('span','badge b-doing','已完成'));
+      task.appendChild(top);
+      if(t.why) task.appendChild(el('div','why', t.why));
+      if(t.note) task.appendChild(el('div','note','⚠ ' + t.note));
+      const foot = el('div','foot');
+      if(t.eta) foot.appendChild(el('span','','⏱ ' + t.eta));
+      if(t.ref && t.ref!=='—') foot.appendChild(el('code','', t.ref));
+      task.appendChild(foot);
+      box.appendChild(task);
+    });
+    lanes.appendChild(box);
+  });
+
+  document.getElementById('summary').textContent = `共 ${total} 项 · 已完成 ${done} · 待办 ${total-done}`;
+}
+</script>
+</body>
+</html>
