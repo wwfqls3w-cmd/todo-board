@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-24T12:34:00+08:00",
-  "updated_note": "Payoneer 注册已完成；G1 测试进行中",
+  "updated": "2026-10-24T12:39:00+08:00",
+  "updated_note": "撤销身份路线拍板项（本人决定不预设身份）",
   "lanes": [
     {
       "id": "now",
@@ -45,16 +45,6 @@
       "title": "今天顺手做",
       "subtitle": "15 分钟以内能推掉",
       "tasks": [
-        {
-          "id": "t-identity",
-          "title": "拍板身份路线：产品 vs 渠道养产品",
-          "owner": "你",
-          "priority": "P0",
-          "eta": "15 分钟",
-          "why": "GEO 本质是渠道不是产品（平台也是渠道的规模化形态）。要决定主线做产品，还是先用渠道赚现金流养产品。判断标准见文件。",
-          "ref": "raw/notes/2026-10-24-渠道与产品的本质区别.md",
-          "status": "todo"
-        },
         {
           "id": "t-g2",
           "title": "发 G2 Payoneer 问询邮件",
