@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-24T12:24:00+08:00",
-  "updated_note": "新增「身份路线：渠道还是产品」待拍板项",
+  "updated": "2026-10-24T12:34:00+08:00",
+  "updated_note": "Payoneer 注册已完成；G1 测试进行中",
   "lanes": [
     {
       "id": "now",
@@ -13,9 +13,9 @@
           "owner": "你",
           "priority": "P0",
           "eta": "20 分钟 + 认证 1–3 天",
-          "why": "收款前提，卡着整条付费信号验证线。认证要 1–3 天，越早开越好。",
+          "why": "已完成（认证 1–3 天，等审核结果）。收款前提已解决。",
           "ref": "outputs/GEO-海外/01-证据/收款通道-2026-10-24.md",
-          "status": "todo"
+          "status": "done"
         },
         {
           "id": "t-g1",
@@ -23,9 +23,9 @@
           "owner": "你",
           "priority": "P0",
           "eta": "30–40 分钟",
-          "why": "决定成人 niche gate 生死：≥6 query 有品牌=过，<4=降级转宠物。",
+          "why": "你正在跑。跑完把 12 条结果贴给我，我算 gate 是否过（≥6 条有品牌=过，<4=转宠物）。",
           "ref": "outputs/GEO-海外/02-实验/2026-10-24-G1操作包.md",
-          "status": "todo"
+          "status": "doing"
         },
         {
           "id": "t-rainbow",
