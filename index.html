@@ -8,111 +8,302 @@
   :root{
     --bg:#0d1117; --card:#161b22; --border:#30363d; --text:#e6edf3;
     --muted:#8b949e; --p0:#f85149; --p1:#d29922; --p2:#3fb950;
-    --doing:#58a6ff; --done:#8b949e; --blocked:#a371f7;
+    --doing:#58a6ff; --done:#3fb950; --blocked:#a371f7;
   }
-  *{box-sizing:border-box;margin:0;padding:0}
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
   body{background:var(--bg);color:var(--text);
-    font:15px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
-    padding:16px;max-width:1400px;margin:0 auto}
-  header{margin-bottom:20px;padding-bottom:14px;border-bottom:1px solid var(--border)}
-  h1{font-size:20px;font-weight:600;letter-spacing:.3px}
-  .meta{color:var(--muted);font-size:12px;margin-top:6px;display:flex;gap:16px;flex-wrap:wrap}
-  .lanes{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
-  .lane{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:14px}
-  .lane h2{font-size:15px;font-weight:600;margin-bottom:2px;display:flex;align-items:center;gap:8px}
-  .lane .sub{color:var(--muted);font-size:12px;margin-bottom:12px}
+    font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+    padding:12px;max-width:1200px;margin:0 auto;padding-bottom:64px}
+  header{margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid var(--border)}
+  h1{font-size:18px;font-weight:600;letter-spacing:.3px}
+  .meta{color:var(--muted);font-size:12px;margin-top:5px}
+  .summary{color:var(--text);font-size:12.5px;margin-top:3px;font-weight:500}
+
+  .filters{position:sticky;top:0;background:var(--bg);z-index:5;
+    padding:8px 0 6px;border-bottom:1px solid var(--border);margin-bottom:12px}
+  .chips{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:6px}
+  .chips:last-child{margin-bottom:0}
+  .chips button{font-size:12px;padding:4px 11px;border:1px solid var(--border);
+    background:transparent;color:var(--muted);border-radius:20px;cursor:pointer;font-weight:500}
+  .chips button.active{background:rgba(88,166,255,.16);color:var(--doing);border-color:var(--doing)}
+  .chips .lbl{font-size:11px;color:var(--muted);align-self:center;margin-right:2px}
+
+  .lanes{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
+  .lane{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:12px}
+  .lane h2{font-size:14.5px;font-weight:600;margin-bottom:2px;display:flex;align-items:center;gap:8px}
+  .lane .sub{color:var(--muted);font-size:11.5px;margin-bottom:10px}
   .count{background:var(--border);color:var(--text);font-size:11px;
     padding:1px 7px;border-radius:10px;font-weight:500}
-  .task{border-left:3px solid var(--border);padding:10px 0 10px 11px;margin-bottom:10px;
-    border-radius:0 4px 4px 0;transition:.15s}
-  .task:hover{background:#1c2128}
+
+  .task{border-left:3px solid var(--border);padding:8px 0 8px 10px;margin-bottom:8px;
+    border-radius:0 4px 4px 0;position:relative}
   .task.p0{border-left-color:var(--p0)} .task.p1{border-left-color:var(--p1)} .task.p2{border-left-color:var(--p2)}
-  .task.done{opacity:.5}
+  .task.done{opacity:.55}
   .task.done .t-title{text-decoration:line-through}
-  .t-top{display:flex;align-items:flex-start;gap:8px;margin-bottom:4px}
-  .t-title{font-size:14px;font-weight:500;flex:1}
-  .badge{font-size:10px;padding:1px 6px;border-radius:3px;white-space:nowrap;font-weight:600}
+  .t-top{display:flex;align-items:flex-start;gap:6px;margin-bottom:2px;flex-wrap:wrap}
+  .t-title{font-size:13.5px;font-weight:500;flex:1;min-width:60%}
+  .badge{font-size:10px;padding:1px 6px;border-radius:3px;white-space:nowrap;font-weight:600;line-height:1.5}
   .b-p0{background:rgba(248,81,73,.15);color:var(--p0)}
   .b-p1{background:rgba(210,153,34,.15);color:var(--p1)}
   .b-p2{background:rgba(63,185,80,.15);color:var(--p2)}
   .b-you{background:rgba(88,166,255,.15);color:var(--doing)}
   .b-me{background:rgba(163,113,247,.15);color:var(--blocked)}
-  .b-doing{background:rgba(88,166,255,.2);color:var(--doing)}
   .b-blocked{background:rgba(163,113,247,.2);color:var(--blocked)}
-  .why{color:var(--muted);font-size:12.5px;margin:5px 0}
-  .foot{display:flex;gap:12px;flex-wrap:wrap;font-size:11px;color:var(--muted);margin-top:6px}
-  .foot code{background:#0d1117;padding:1px 5px;border-radius:3px;font-size:10.5px}
-  .note{color:var(--blocked);font-size:11.5px;margin-top:4px}
-  footer{margin-top:24px;padding-top:14px;border-top:1px solid var(--border);
-    color:var(--muted);font-size:11.5px;text-align:center}
+  .pend{color:var(--p1);font-size:10px;font-weight:700}
+
+  .seg{display:flex;gap:5px;margin:7px 0 2px}
+  .seg button{flex:1;padding:6px 0;font-size:12px;border:1px solid var(--border);
+    background:transparent;color:var(--muted);border-radius:6px;cursor:pointer;font-weight:500}
+  .seg button:active{transform:scale(.97)}
+  .seg button.s-todo.active{background:rgba(139,148,158,.2);color:var(--text);border-color:var(--muted)}
+  .seg button.s-doing.active{background:rgba(88,166,255,.22);color:var(--doing);border-color:var(--doing)}
+  .seg button.s-done.active{background:rgba(63,185,80,.2);color:var(--done);border-color:var(--done)}
+
+  .dtoggle{background:none;border:none;color:var(--muted);font-size:11.5px;
+    cursor:pointer;padding:3px 0;margin-top:2px}
+  .detail{display:none;margin-top:4px}
+  .task.open .detail{display:block}
+  .why{color:var(--muted);font-size:12px;margin:3px 0}
+  .note{color:var(--blocked);font-size:11.5px;margin-top:3px}
+  .foot{display:flex;gap:10px;flex-wrap:wrap;font-size:11px;color:var(--muted);margin-top:5px;align-items:center}
+  .foot code{background:#0d1117;padding:1px 5px;border-radius:3px;font-size:10px}
   .empty{color:var(--muted);font-size:12.5px;font-style:italic}
+
+  .syncbar{position:fixed;left:0;right:0;bottom:0;background:#161b22;
+    border-top:1px solid var(--border);padding:10px 14px;display:none;
+    align-items:center;gap:10px;font-size:13px;z-index:10;flex-wrap:wrap}
+  .syncbar.show{display:flex}
+  .syncbar .txt{flex:1;min-width:120px}
+  .syncbar button{font-size:12.5px;padding:6px 12px;border-radius:6px;cursor:pointer;font-weight:600;border:1px solid var(--border)}
+  .btn-copy{background:var(--doing);color:#0d1117;border-color:var(--doing)}
+  .btn-drop{background:transparent;color:var(--muted)}
+
+  .toast{position:fixed;left:50%;bottom:76px;transform:translateX(-50%);
+    background:var(--done);color:#0d1117;padding:8px 16px;border-radius:20px;
+    font-size:13px;font-weight:600;z-index:20;opacity:0;transition:.2s;pointer-events:none}
+  .toast.show{opacity:1}
+  footer{margin-top:16px;color:var(--muted);font-size:11px;text-align:center;line-height:1.7}
 </style>
 </head>
 <body>
 <header>
   <h1>今日待办 · 看板</h1>
-  <div class="meta">
-    <span id="updated">加载中…</span>
-    <span id="summary"></span>
-  </div>
+  <div class="meta" id="updated">加载中…</div>
+  <div class="summary" id="summary"></div>
 </header>
+
+<div class="filters">
+  <div class="chips" id="statusFilter">
+    <span class="lbl">状态</span>
+    <button data-f="all" class="active">全部</button>
+    <button data-f="todo">待开始</button>
+    <button data-f="doing">进行中</button>
+    <button data-f="done">已完成</button>
+  </div>
+  <div class="chips" id="ownerFilter">
+    <span class="lbl">谁</span>
+    <button data-o="all" class="active">全部</button>
+    <button data-o="你">你的</button>
+    <button data-o="我">我的</button>
+  </div>
+</div>
+
 <main class="lanes" id="lanes"></main>
-<footer>数据源 <code>tasks.json</code> · 我改 JSON 你刷新即见</footer>
+
+<div class="syncbar" id="syncbar">
+  <span class="txt" id="synctxt"></span>
+  <button class="btn-copy" id="btnCopy">复制给 AI</button>
+  <button class="btn-drop" id="btnDrop">丢弃</button>
+</div>
+
+<div class="toast" id="toast">已复制</div>
+
+<footer>
+  点每张卡上的 <b>待开始 / 进行中 / 已完成</b> 直接改，改动存在本机浏览器，刷新不丢。<br>
+  改完点底部「复制给 AI」→ 贴给 AI → 我更新 <code>tasks.json</code> 并 push，全设备生效。
+</footer>
+
 <script>
-const STATUS = {todo:'待办', doing:'进行中', done:'已完成', blocked:'卡住'};
-function el(tag, cls, txt){const e=document.createElement(tag); if(cls)e.className=cls; if(txt!=null)e.textContent=txt; return e;}
+const LS_KEY = 'todoboard.status.v1';
+let OVER = load();
+let DATA = null;
+let statusFilter = 'all', ownerFilter = 'all';
+
+function load(){ try{ return JSON.parse(localStorage.getItem(LS_KEY)) || {}; }catch(e){ return {}; } }
+function save(){ localStorage.setItem(LS_KEY, JSON.stringify(OVER)); }
+function st(t){ return OVER[t.id] || t.status; }
+function esc(s){ return (s==null?'':String(s)).replace(/[&<>]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c])); }
 
 fetch('tasks.json?t=' + Date.now())
-  .then(r=>r.json())
-  .then(render)
-  .catch(e=>{
+  .then(r => r.json())
+  .then(d => { DATA = d; absorb(); render(); })
+  .catch(e => {
     document.getElementById('lanes').innerHTML =
-      '<p class="empty">读取失败：' + e.message + '</p>';
+      '<p class="empty">读取 tasks.json 失败：' + esc(e.message) + '（本地打开需起个 http 服务，别用 file:// ）</p>';
   });
 
-function render(data){
+// 已同步进 tasks.json 的改动，清掉本地覆盖，保持 store 干净
+function absorb(){
+  let changed = false;
+  DATA.lanes.forEach(l => l.tasks.forEach(t => {
+    if (OVER[t.id] && OVER[t.id] === t.status){ delete OVER[t.id]; changed = true; }
+  }));
+  if (changed) save();
+}
+
+function matches(t){
+  const s = st(t);
+  if (statusFilter !== 'all' && s !== statusFilter) return false;
+  if (ownerFilter !== 'all' && (t.owner||'') !== ownerFilter) return false;
+  return true;
+}
+
+function render(){
   const upd = document.getElementById('updated');
-  upd.textContent = '更新于 ' + (data.updated || '未知') + (data.updated_note ? ' · ' + data.updated_note : '');
+  upd.textContent = '更新于 ' + (DATA.updated || '未知') + (DATA.updated_note ? ' · ' + DATA.updated_note : '');
 
   const lanes = document.getElementById('lanes');
   lanes.innerHTML = '';
-  let total = 0, done = 0;
 
-  data.lanes.forEach(lane=>{
-    const box = el('div','lane');
-    const h = el('h2');
+  DATA.lanes.forEach(lane => {
+    const visible = lane.tasks.filter(matches);
+    if (!visible.length) return;
+    const box = document.createElement('div'); box.className = 'lane';
+    const pending = visible.filter(t => st(t) !== 'done').length;
+    const h = document.createElement('h2');
     h.appendChild(document.createTextNode(lane.title));
-    const pending = lane.tasks.filter(t=>t.status!=='done').length;
-    h.appendChild(el('span','count', pending));
+    h.appendChild(Object.assign(document.createElement('span'), {className:'count', textContent: pending}));
     box.appendChild(h);
-    box.appendChild(el('div','sub', lane.subtitle || ''));
-
-    if(!lane.tasks.length) box.appendChild(el('p','empty','（空）'));
-
-    lane.tasks.forEach(t=>{
-      total++; if(t.status==='done') done++;
-      const task = el('div','task ' + (t.priority||'').toLowerCase() + (t.status==='done'?' done':''));
-      const top = el('div','t-top');
-      top.appendChild(el('span','t-title', t.title));
-      top.appendChild(el('span','badge b-'+(t.priority||'').toLowerCase(), t.priority||''));
-      top.appendChild(el('span','badge '+(t.owner==='我'?'b-me':'b-you'), t.owner||''));
-      if(t.status==='doing') top.appendChild(el('span','badge b-doing','进行中'));
-      if(t.status==='blocked') top.appendChild(el('span','badge b-blocked','卡住'));
-      if(t.status==='done') top.appendChild(el('span','badge b-doing','已完成'));
-      task.appendChild(top);
-      if(t.why) task.appendChild(el('div','why', t.why));
-      if(t.note) task.appendChild(el('div','note','⚠ ' + t.note));
-      const foot = el('div','foot');
-      if(t.eta) foot.appendChild(el('span','','⏱ ' + t.eta));
-      if(t.ref && t.ref!=='—') foot.appendChild(el('code','', t.ref));
-      task.appendChild(foot);
-      box.appendChild(task);
-    });
+    box.appendChild(Object.assign(document.createElement('div'), {className:'sub', textContent: lane.subtitle || ''}));
+    visible.forEach(t => box.appendChild(card(t)));
     lanes.appendChild(box);
   });
 
-  document.getElementById('summary').textContent = `共 ${total} 项 · 已完成 ${done} · 待办 ${total-done}`;
+  if (!lanes.children.length) lanes.innerHTML = '<p class="empty">当前筛选下没有事项。</p>';
+  updateHeader(); updateSync();
 }
+
+function card(t){
+  const s = st(t);
+  const isPending = !!OVER[t.id];
+  const task = document.createElement('div');
+  task.className = 'task ' + (t.priority||'').toLowerCase() + (s==='done' ? ' done' : '');
+  task.dataset.id = t.id;
+
+  const top = document.createElement('div'); top.className = 't-top';
+  top.appendChild(Object.assign(document.createElement('span'), {className:'t-title', textContent: t.title}));
+  if (t.priority) top.appendChild(Object.assign(document.createElement('span'), {className:'badge b-'+(t.priority||'').toLowerCase(), textContent: t.priority}));
+  if (t.owner) top.appendChild(Object.assign(document.createElement('span'), {className:'badge '+(t.owner==='我'?'b-me':'b-you'), textContent: t.owner}));
+  if (s === 'blocked') top.appendChild(Object.assign(document.createElement('span'), {className:'badge b-blocked', textContent:'卡住'}));
+  if (isPending) top.appendChild(Object.assign(document.createElement('span'), {className:'pend', textContent:'●未同步'}));
+  task.appendChild(top);
+
+  const seg = document.createElement('div'); seg.className = 'seg';
+  [['todo','待开始'],['doing','进行中'],['done','已完成']].forEach(([k,label])=>{
+    const b = document.createElement('button');
+    b.className = 's-'+k + (s===k ? ' active' : '');
+    b.textContent = label; b.dataset.st = k;
+    b.onclick = () => setStatus(t.id, k);
+    seg.appendChild(b);
+  });
+  task.appendChild(seg);
+
+  const dt = document.createElement('button'); dt.className = 'dtoggle';
+  dt.textContent = '详情 ▾';
+  dt.onclick = () => { task.classList.toggle('open'); dt.textContent = task.classList.contains('open') ? '详情 ▴' : '详情 ▾'; };
+  task.appendChild(dt);
+
+  const detail = document.createElement('div'); detail.className = 'detail';
+  if (t.why) detail.appendChild(Object.assign(document.createElement('div'), {className:'why', textContent: t.why}));
+  if (t.note) detail.appendChild(Object.assign(document.createElement('div'), {className:'note', textContent: '⚠ ' + t.note}));
+  const foot = document.createElement('div'); foot.className = 'foot';
+  if (t.eta) foot.appendChild(Object.assign(document.createElement('span'), {textContent:'⏱ ' + t.eta}));
+  if (t.ref && t.ref !== '—') foot.appendChild(Object.assign(document.createElement('code'), {textContent: t.ref}));
+  detail.appendChild(foot);
+  task.appendChild(detail);
+
+  return task;
+}
+
+function setStatus(id, k){
+  OVER[id] = k; save();
+  const cardEl = document.querySelector('.task[data-id="'+id+'"]');
+  if (cardEl){
+    cardEl.classList.toggle('done', k === 'done');
+    cardEl.querySelectorAll('.seg button').forEach(b => b.classList.toggle('active', b.dataset.st === k));
+    const top = cardEl.querySelector('.t-top');
+    let dot = top.querySelector('.pend');
+    if (!dot){ dot = document.createElement('span'); dot.className = 'pend'; top.appendChild(dot); }
+    dot.textContent = '●未同步';
+  }
+  updateHeader(); updateSync();
+}
+
+function updateHeader(){
+  let total=0, todo=0, doing=0, done=0;
+  DATA.lanes.forEach(l => l.tasks.forEach(t => {
+    total++; const s = st(t);
+    if (s==='done') done++; else if (s==='doing') doing++; else if (s==='todo') todo++; else if (s==='blocked') doing++; // blocked 计入未完成
+  }));
+  document.getElementById('summary').textContent =
+    `共 ${total} · 待开始 ${todo} · 进行中 ${doing} · 已完成 ${done}`;
+}
+
+function pendingList(){
+  const out = [];
+  DATA.lanes.forEach(l => l.tasks.forEach(t => { if (OVER[t.id]) out.push({id:t.id, title:t.title, from:t.status, to:OVER[t.id]}); }));
+  return out;
+}
+
+function updateSync(){
+  const p = pendingList();
+  const bar = document.getElementById('syncbar');
+  if (!p.length){ bar.classList.remove('show'); return; }
+  bar.classList.add('show');
+  document.getElementById('synctxt').textContent = `${p.length} 处改动未同步到 tasks.json`;
+}
+
+function buildCopyText(){
+  const p = pendingList();
+  let s = '【看板状态回传】请把 tasks.json 里这些任务的 status 改掉：\n';
+  p.forEach(x => { s += `- ${x.id} → ${x.to}   （${x.title}）\n`; });
+  s += '改完 push，我这边全设备生效。';
+  return s;
+}
+
+document.getElementById('btnCopy').onclick = () => {
+  const txt = buildCopyText();
+  const done = () => showToast('已复制，贴给 AI 即可');
+  if (navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(txt).then(done).catch(()=>fallbackCopy(txt, done));
+  } else fallbackCopy(txt, done);
+};
+function fallbackCopy(txt, cb){
+  const ta = document.createElement('textarea');
+  ta.value = txt; ta.style.position='fixed'; ta.style.opacity='0';
+  document.body.appendChild(ta); ta.select();
+  try{ document.execCommand('copy'); cb(); }catch(e){ alert(txt); }
+  document.body.removeChild(ta);
+}
+document.getElementById('btnDrop').onclick = () => {
+  if (!confirm('丢弃全部本地改动，恢复成 tasks.json 里的状态？')) return;
+  OVER = {}; save(); render();
+};
+
+function showToast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg; t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'), 1600);
+}
+
+document.getElementById('statusFilter').addEventListener('click', e => {
+  if (e.target.dataset.f){ statusFilter = e.target.dataset.f;
+    [...e.currentTarget.querySelectorAll('button')].forEach(b=>b.classList.toggle('active', b===e.target)); render(); }
+});
+document.getElementById('ownerFilter').addEventListener('click', e => {
+  if (e.target.dataset.o){ ownerFilter = e.target.dataset.o;
+    [...e.currentTarget.querySelectorAll('button')].forEach(b=>b.classList.toggle('active', b===e.target)); render(); }
+});
 </script>
 </body>
 </html>
