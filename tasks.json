@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-24T12:39:00+08:00",
-  "updated_note": "撤销身份路线拍板项（本人决定不预设身份）",
+  "updated": "2026-10-24T12:42:00+08:00",
+  "updated_note": "三个 finalist 深挖全部启动（并行）",
   "lanes": [
     {
       "id": "now",
@@ -104,14 +104,14 @@
         },
         {
           "id": "t-s1",
-          "title": "3 个 finalist 深挖（竞品/定价/差评/流量/技术）",
+          "title": "3 个 finalist 全部深挖（#33/#14/#32）",
           "owner": "我",
           "priority": "P1",
           "eta": "—",
-          "why": "等 finalist 拍板后开始。",
+          "why": "三个都查，并行进行中。",
           "ref": "outputs/GEO-海外/02-实验/",
-          "status": "blocked",
-          "note": "等 t-finalist"
+          "status": "doing",
+          "note": ""
         },
         {
           "id": "t-shortlist",
@@ -132,6 +132,36 @@
           "why": "日报点名：raw/articles 两篇 HTML 会被编译员永久跳过；GEO-海外 20 份判断没回流 wiki。",
           "ref": "outputs/盘点/2026-10-23_机制与岗位全景.md",
           "status": "todo"
+        },
+        {
+          "id": "t-s1a",
+          "title": "深挖 #33 Email 成本对比",
+          "owner": "我",
+          "priority": "P1",
+          "eta": "—",
+          "why": "并行调研中（竞品/定价/差评/流量/技术可行性/判断）。",
+          "ref": "outputs/GEO-海外/02-实验/S1深挖-33-Email成本对比.md",
+          "status": "doing"
+        },
+        {
+          "id": "t-s1b",
+          "title": "深挖 #14 Shopify 搜索增强",
+          "owner": "我",
+          "priority": "P1",
+          "eta": "—",
+          "why": "并行调研中（竞品/定价/差评/流量/技术可行性/判断）。",
+          "ref": "outputs/GEO-海外/02-实验/S1深挖-14-Shopify搜索增强.md",
+          "status": "doing"
+        },
+        {
+          "id": "t-s1c",
+          "title": "深挖 #32 WP 插件健康监控",
+          "owner": "我",
+          "priority": "P1",
+          "eta": "—",
+          "why": "并行调研中（竞品/定价/差评/流量/技术可行性/判断）。",
+          "ref": "outputs/GEO-海外/02-实验/S1深挖-32-WP插件健康监控.md",
+          "status": "doing"
         }
       ]
     },
