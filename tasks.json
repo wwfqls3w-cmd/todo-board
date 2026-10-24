@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-24T14:30:00+08:00",
- "updated_note": "S1 三个 finalist 全部否决；等你拍板下一步（推荐 A：转做付费体检/审计）",
+ "updated": "2026-10-24T20:05:00+08:00",
+ "updated_note": "G1 跑完、3 个 finalist 与 S1 后方向已拍板、6–10h 已声明；彩虹桥、扫描范围、成人 gate 待启动",
  "lanes": [
   {
    "id": "now",
@@ -23,9 +23,9 @@
      "owner": "你",
      "priority": "P0",
      "eta": "30–40 分钟",
-     "why": "你正在跑。跑完把 12 条结果贴给我，我算 gate 是否过（≥6 条有品牌=过，<4=转宠物）。",
+     "why": "已完成（12 query × 5 引擎跑完）。结果贴给我，我算 gate 是否过（≥6 条有品牌=过，<4=转宠物）。",
      "ref": "outputs/GEO-海外/02-实验/2026-10-24-G1操作包.md",
-     "status": "doing"
+     "status": "done"
     },
     {
      "id": "t-rainbow",
@@ -35,7 +35,7 @@
      "eta": "待定",
      "why": "新增任务。目前资料库为空（正常，还没开始做），需要先定目标/交付物/截止时间。",
      "ref": "—",
-     "status": "blocked",
+     "status": "todo",
      "note": "缺输入：要做什么、交付物、时间点"
     }
    ]
@@ -71,9 +71,9 @@
      "owner": "你",
      "priority": "P1",
      "eta": "15 分钟",
-     "why": "候选：#33 Email成本对比 / #14 Shopify搜索 / #32 WP插件健康监控。不拍板我无法开深挖。",
+     "why": "已拍板：3 个 finalist 全部深挖完成。",
      "ref": "outputs/GEO-海外/02-实验/2026-10-24-S1-为什么现在.md",
-     "status": "todo"
+     "status": "done"
     },
     {
      "id": "t-price",
@@ -138,10 +138,10 @@
      "owner": "你",
      "priority": "P0",
      "eta": "10 分钟",
-     "why": "A 转做付费体检/审计报告（$99-299/份，一周内可开卖，我推荐）｜B 回 S0 换筛子重扫｜C 挑 #14 做 6 个月快钱。选一个我就往下推。",
+     "why": "已拍板。A/B/C 方向已定，S1 三个 finalist 全部否决并升级了 S0 否决项。",
      "ref": "outputs/GEO-海外/02-实验/S1深挖-汇总结论-2026-10-24.md",
-     "status": "blocked",
-     "note": "等你拍板"
+     "status": "done",
+     "note": "已定"
     },
     {
      "id": "t-dtc",
@@ -196,9 +196,9 @@
      "owner": "你",
      "priority": "P2",
      "eta": "1 分钟",
-     "why": "决定排期密度。",
+     "why": "已声明：每天可投入 6–10 小时。",
      "ref": "outputs/GEO-海外/协作看板.md",
-     "status": "todo"
+     "status": "done"
     },
     {
      "id": "t-adult2w",
