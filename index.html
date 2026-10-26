@@ -204,7 +204,7 @@ function renderIdeas(){
     foot.textContent = '';
     return;
   }
-  const LIMIT = 4;
+  const LIMIT = 3;
   const open = box.classList.contains('open');
   const show = open ? IDEAS : IDEAS.slice(0, LIMIT);
   document.getElementById('ideacnt').textContent = IDEAS.length + ' 条';
@@ -225,12 +225,20 @@ function renderIdeas(){
 }
 function toggleIdeas(){
   const box = document.getElementById('ideabox');
-  if (IDEAS.length <= 4) return;   // 全都在显示时折叠没有意义
+  if (IDEAS.length <= 3) return;   // 本来就全展开，折叠没有意义
   box.classList.toggle('open');
   document.getElementById('ideaarw').textContent = box.classList.contains('open') ? '▴' : '▾';
   renderIdeas();
 }
-document.getElementById('ideahead').onclick = toggleIdeas;
+// 整块点子区都可点开：点标题行、点空白、点底部链接都行。
+// 只绑在 ideabox 上（标题行会冒泡到这里），避免重复绑两个 handler 导致连点两次又关回去。
+// 展开状态下点正文里的条目不会收起——只有点标题行或底部链接才收起。
+document.getElementById('ideabox').addEventListener('click', (e) => {
+  if (e.target.closest('#ideatoggle')) return;              // 底部链接自己处理
+  const inBody = e.target.closest('#ideabody');
+  if (inBody && document.getElementById('ideabox').classList.contains('open')) return;
+  toggleIdeas();
+});
 
 function renderDaily(){
   const wrap = document.getElementById('daily');
