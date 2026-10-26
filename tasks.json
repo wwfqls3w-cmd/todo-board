@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-26T16:10:00+08:00",
-  "updated_note": "d-post / d-english → done（Hermes 回传）；保留 p-pdf 新增与 d-english 泛听说明",
+  "updated": "2026-10-26T16:53:00+08:00",
+  "updated_note": "d-shengcai → done（Hermes 回传）；三条每日固定全部完成",
   "daily": [
     {
       "id": "d-post",
@@ -18,7 +18,7 @@
       "id": "d-shengcai",
       "title": "生财有术",
       "note": "每天看 1–2 个人 · 时间浮动",
-      "status": "todo"
+      "status": "done"
     }
   ],
   "projects": [
