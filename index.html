@@ -7,75 +7,87 @@
 <style>
   :root{
     --bg:#0d1117; --card:#161b22; --border:#30363d; --text:#e6edf3;
-    --muted:#8b949e; --p0:#f85149; --p1:#d29922; --p2:#3fb950;
-    --doing:#58a6ff; --done:#3fb950; --blocked:#a371f7;
+    --muted:#8b949e; --doing:#58a6ff; --done:#3fb950; --warn:#d29922;
+    --idea:#a371f7; --p0:#f85149;
   }
   *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
   body{background:var(--bg);color:var(--text);
     font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
-    padding:12px;max-width:1200px;margin:0 auto;padding-bottom:64px}
-  header{margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid var(--border)}
+    padding:12px;max-width:820px;margin:0 auto;padding-bottom:76px}
+  header{margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid var(--border)}
   h1{font-size:18px;font-weight:600;letter-spacing:.3px}
   .meta{color:var(--muted);font-size:12px;margin-top:5px}
-  .summary{color:var(--text);font-size:12.5px;margin-top:3px;font-weight:500}
 
-  .filters{position:sticky;top:0;background:var(--bg);z-index:5;
-    padding:8px 0 6px;border-bottom:1px solid var(--border);margin-bottom:12px}
-  .chips{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:6px}
-  .chips:last-child{margin-bottom:0}
-  .chips button{font-size:12px;padding:4px 11px;border:1px solid var(--border);
-    background:transparent;color:var(--muted);border-radius:20px;cursor:pointer;font-weight:500}
-  .chips button.active{background:rgba(88,166,255,.16);color:var(--doing);border-color:var(--doing)}
-  .chips .lbl{font-size:11px;color:var(--muted);align-self:center;margin-right:2px}
+  section{margin-bottom:18px}
+  .sh{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+  .sh h2{font-size:14px;font-weight:600;letter-spacing:.5px}
+  .sh .cnt{background:var(--border);color:var(--muted);font-size:11px;padding:1px 7px;border-radius:10px}
 
-  .lanes{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
-  .lane{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:12px}
-  .lane h2{font-size:14.5px;font-weight:600;margin-bottom:2px;display:flex;align-items:center;gap:8px}
-  .lane .sub{color:var(--muted);font-size:11.5px;margin-bottom:10px}
-  .count{background:var(--border);color:var(--text);font-size:11px;
-    padding:1px 7px;border-radius:10px;font-weight:500}
+  .ideabox{background:var(--card);border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-bottom:16px}
+  .ideahead{display:flex;align-items:center;gap:8px;padding:10px 12px;cursor:pointer;user-select:none}
+  .ideahead .t{font-size:13.5px;font-weight:600;flex:1}
+  .ideahead .n{color:var(--idea);font-size:11.5px}
+  .ideahead .arw{color:var(--muted);font-size:12px}
+  .ideabody{display:none;border-top:1px solid var(--border)}
+  .ideabox.open .ideabody{display:block}
+  .idea{display:flex;gap:8px;padding:8px 12px;border-bottom:1px solid rgba(48,54,61,.55);align-items:baseline}
+  .idea:last-child{border-bottom:none}
+  .idea .d{color:var(--muted);font-size:11px;white-space:nowrap;font-variant-numeric:tabular-nums}
+  .idea .ti{font-size:12.5px;flex:1;line-height:1.45}
+  .tag{font-size:10px;padding:1px 6px;border-radius:3px;white-space:nowrap;font-weight:600}
+  .tag.k-h{background:rgba(163,113,247,.16);color:var(--idea)}
+  .tag.k-v{background:rgba(88,166,255,.16);color:var(--doing)}
+  .tag.k-g{background:rgba(63,185,80,.16);color:var(--done)}
+  .tag.k-n{background:rgba(248,81,73,.16);color:var(--p0)}
+  .ideafoot{padding:8px 12px;border-top:1px solid var(--border);color:var(--muted);font-size:11.5px}
+  .ideafoot a{color:var(--doing);text-decoration:none}
 
-  .task{border-left:3px solid var(--border);padding:8px 0 8px 10px;margin-bottom:8px;
-    border-radius:0 4px 4px 0;position:relative}
-  .task.p0{border-left-color:var(--p0)} .task.p1{border-left-color:var(--p1)} .task.p2{border-left-color:var(--p2)}
-  .task.done{opacity:.55}
-  .task.done .t-title{text-decoration:line-through}
-  .t-top{display:flex;align-items:flex-start;gap:6px;margin-bottom:2px;flex-wrap:wrap}
-  .t-title{font-size:13.5px;font-weight:500;flex:1;min-width:60%}
-  .badge{font-size:10px;padding:1px 6px;border-radius:3px;white-space:nowrap;font-weight:600;line-height:1.5}
-  .b-p0{background:rgba(248,81,73,.15);color:var(--p0)}
-  .b-p1{background:rgba(210,153,34,.15);color:var(--p1)}
-  .b-p2{background:rgba(63,185,80,.15);color:var(--p2)}
-  .b-you{background:rgba(88,166,255,.15);color:var(--doing)}
-  .b-me{background:rgba(163,113,247,.15);color:var(--blocked)}
-  .b-blocked{background:rgba(163,113,247,.2);color:var(--blocked)}
-  .pend{color:var(--p1);font-size:10px;font-weight:700}
-  .del{background:none;border:none;color:#484f58;font-size:15px;line-height:1;
-    cursor:pointer;padding:1px 4px;border-radius:4px;margin-left:2px}
-  .del:hover{color:var(--p0);background:rgba(248,81,73,.12)}
-  .task.deleted{opacity:.45;border-left-color:var(--p0)}
-  .task.deleted .t-title{text-decoration:line-through;color:var(--p0)}
-  .undo{background:rgba(88,166,255,.14);border:1px solid var(--doing);color:var(--doing);
-    font-size:11.5px;padding:3px 10px;border-radius:5px;cursor:pointer;font-weight:600;margin-top:5px}
-  .b-del{background:rgba(248,81,73,.15);color:var(--p0)}
+  .daily{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:4px 0}
+  .drow{display:flex;align-items:center;gap:10px;padding:10px 12px;border-bottom:1px solid rgba(48,54,61,.55)}
+  .drow:last-child{border-bottom:none}
+  .dbox{width:18px;height:18px;border-radius:4px;border:1.5px solid var(--border);
+    display:flex;align-items:center;justify-content:center;font-size:12px;cursor:pointer;flex-shrink:0;color:transparent}
+  .drow.on .dbox{background:var(--done);border-color:var(--done);color:#0d1117}
+  .dmain{flex:1;min-width:0}
+  .dt{font-size:13.5px;font-weight:500}
+  .drow.on .dt{color:var(--muted);text-decoration:line-through}
+  .dn{color:var(--muted);font-size:11.5px;margin-top:1px}
 
-  .seg{display:flex;gap:5px;margin:7px 0 2px}
+  .proj{background:var(--card);border:1px solid var(--border);border-left:3px solid var(--border);
+    border-radius:8px;padding:12px;margin-bottom:10px;position:relative}
+  .proj.doing{border-left-color:var(--doing)}
+  .proj.done{border-left-color:var(--done);opacity:.6}
+  .proj.todo{border-left-color:var(--muted)}
+  .phead{display:flex;align-items:flex-start;gap:8px;margin-bottom:4px}
+  .ptitle{font-size:14.5px;font-weight:600;flex:1}
+  .proj.done .ptitle{text-decoration:line-through}
+  .pone{color:var(--muted);font-size:12px;line-height:1.5;margin:2px 0 8px}
+  .blocker{font-size:12px;line-height:1.5;padding:6px 9px;border-radius:5px;margin-bottom:9px;
+    background:rgba(210,153,34,.1);color:var(--warn);border-left:2px solid var(--warn)}
+  .blocker b{font-weight:600}
+  .seg{display:flex;gap:6px}
   .seg button{flex:1;padding:6px 0;font-size:12px;border:1px solid var(--border);
     background:transparent;color:var(--muted);border-radius:6px;cursor:pointer;font-weight:500}
   .seg button:active{transform:scale(.97)}
   .seg button.s-todo.active{background:rgba(139,148,158,.2);color:var(--text);border-color:var(--muted)}
   .seg button.s-doing.active{background:rgba(88,166,255,.22);color:var(--doing);border-color:var(--doing)}
   .seg button.s-done.active{background:rgba(63,185,80,.2);color:var(--done);border-color:var(--done)}
+  .x{background:none;border:none;color:#484f58;font-size:15px;line-height:1;
+    cursor:pointer;padding:1px 4px;border-radius:4px;flex-shrink:0}
+  .x:hover{color:var(--p0);background:rgba(248,81,73,.12)}
+  .proj.deleted{opacity:.45;border-left-color:var(--p0)}
+  .proj.deleted .ptitle{text-decoration:line-through;color:var(--p0)}
+  .undo{background:rgba(88,166,255,.14);border:1px solid var(--doing);color:var(--doing);
+    font-size:11.5px;padding:3px 10px;border-radius:5px;cursor:pointer;font-weight:600;margin-top:6px}
+  .b-del{background:rgba(248,81,73,.15);color:var(--p0)}
+  .pend{color:var(--warn);font-size:10px;font-weight:700;white-space:nowrap}
+  .badge{font-size:10px;padding:1px 6px;border-radius:3px;white-space:nowrap;font-weight:600}
 
-  .dtoggle{background:none;border:none;color:var(--muted);font-size:11.5px;
-    cursor:pointer;padding:3px 0;margin-top:2px}
-  .detail{display:none;margin-top:4px}
-  .task.open .detail{display:block}
-  .why{color:var(--muted);font-size:12px;margin:3px 0}
-  .note{color:var(--blocked);font-size:11.5px;margin-top:3px}
-  .foot{display:flex;gap:10px;flex-wrap:wrap;font-size:11px;color:var(--muted);margin-top:5px;align-items:center}
-  .foot code{background:#0d1117;padding:1px 5px;border-radius:3px;font-size:10px}
-  .empty{color:var(--muted);font-size:12.5px;font-style:italic}
+  .watch{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:4px 0}
+  .wrow{display:flex;gap:8px;padding:9px 12px;border-bottom:1px solid rgba(48,54,61,.55);align-items:baseline}
+  .wrow:last-child{border-bottom:none}
+  .wrow .wt{font-size:13px;font-weight:500;white-space:nowrap}
+  .wrow .wn{color:var(--muted);font-size:11.5px;flex:1}
 
   .syncbar{position:fixed;left:0;right:0;bottom:0;background:#161b22;
     border-top:1px solid var(--border);padding:10px 14px;display:none;
@@ -85,38 +97,44 @@
   .syncbar button{font-size:12.5px;padding:6px 12px;border-radius:6px;cursor:pointer;font-weight:600;border:1px solid var(--border)}
   .btn-copy{background:var(--doing);color:#0d1117;border-color:var(--doing)}
   .btn-drop{background:transparent;color:var(--muted)}
-
-  .toast{position:fixed;left:50%;bottom:76px;transform:translateX(-50%);
+  .toast{position:fixed;left:50%;bottom:84px;transform:translateX(-50%);
     background:var(--done);color:#0d1117;padding:8px 16px;border-radius:20px;
     font-size:13px;font-weight:600;z-index:20;opacity:0;transition:.2s;pointer-events:none}
   .toast.show{opacity:1}
-  footer{margin-top:16px;color:var(--muted);font-size:11px;text-align:center;line-height:1.7}
+  .empty{color:var(--muted);font-size:12.5px;font-style:italic;padding:10px 12px}
+  footer{margin-top:18px;color:var(--muted);font-size:11px;text-align:center;line-height:1.8}
 </style>
 </head>
 <body>
 <header>
   <h1>今日待办 · 看板</h1>
   <div class="meta" id="updated">加载中…</div>
-  <div class="summary" id="summary"></div>
 </header>
 
-<div class="filters">
-  <div class="chips" id="statusFilter">
-    <span class="lbl">状态</span>
-    <button data-f="all" class="active">全部</button>
-    <button data-f="todo">待开始</button>
-    <button data-f="doing">进行中</button>
-    <button data-f="done">已完成</button>
+<div class="ideabox" id="ideabox">
+  <div class="ideahead" id="ideahead">
+    <span class="t">💡 最近点子</span>
+    <span class="n" id="ideacnt"></span>
+    <span class="arw" id="ideaarw">▾</span>
   </div>
-  <div class="chips" id="ownerFilter">
-    <span class="lbl">谁</span>
-    <button data-o="all" class="active">全部</button>
-    <button data-o="你">你的</button>
-    <button data-o="我">我的</button>
-  </div>
+  <div class="ideabody" id="ideabody"></div>
+  <div class="ideafoot" id="ideafoot"></div>
 </div>
 
-<main class="lanes" id="lanes"></main>
+<section>
+  <div class="sh"><h2>📅 每天固定</h2><span class="cnt" id="dcnt"></span></div>
+  <div class="daily" id="daily"></div>
+</section>
+
+<section>
+  <div class="sh"><h2>🎯 项目</h2><span class="cnt" id="pcnt"></span></div>
+  <div id="projects"></div>
+</section>
+
+<section>
+  <div class="sh"><h2>👀 观察池</h2><span class="cnt" id="wcnt"></span></div>
+  <div class="watch" id="watch"></div>
+</section>
 
 <div class="syncbar" id="syncbar">
   <span class="txt" id="synctxt"></span>
@@ -127,207 +145,218 @@
 <div class="toast" id="toast">已复制</div>
 
 <footer>
-  点每张卡上的 <b>待开始 / 进行中 / 已完成</b> 直接改，改动存在本机浏览器，刷新不丢。<br>
-  右上角的 <b>×</b> 是删除：点一下打上「已标记删除」，再点一下撤销。<br>
-  改完点底部「复制给 AI」→ 贴给 AI → 我更新 <code>tasks.json</code> 并 push，全设备生效。
+  每天固定打勾即可，没有进度概念。项目点 <b>待开始 / 进行中 / 已完成</b>，改动存本机，刷新不丢。<br>
+  <b>×</b> 是删除：点一下打标记，再点一下撤销。改完点底部「复制给 AI」→ 贴给我 → 我改 <code>tasks.json</code> 并 push。<br>
+  点子池来自 <code>raw/notes/点子池.md</code>，每天 07:00 自动同步到看板。
 </footer>
 
 <script>
-const LS_KEY = 'todoboard.status.v1';
-const LS_DEL = 'todoboard.deleted.v1';
-let OVER = load();
-let DEL = loadDel();
-let DATA = null;
-let statusFilter = 'all', ownerFilter = 'all';
+const LS_ST = 'todoboard.v2.status';
+const LS_DEL = 'todoboard.v2.deleted';
+let OVER = ld(LS_ST), DEL = ld(LS_DEL), DATA = null, IDEAS = [];
 
-function load(){ try{ return JSON.parse(localStorage.getItem(LS_KEY)) || {}; }catch(e){ return {}; } }
-function save(){ localStorage.setItem(LS_KEY, JSON.stringify(OVER)); }
-function loadDel(){ try{ return JSON.parse(localStorage.getItem(LS_DEL)) || {}; }catch(e){ return {}; } }
-function saveDel(){ localStorage.setItem(LS_DEL, JSON.stringify(DEL)); }
-function isDel(id){ return !!DEL[id]; }
-function st(t){ return OVER[t.id] || t.status; }
+function ld(k){ try{ return JSON.parse(localStorage.getItem(k)) || {}; }catch(e){ return {}; } }
+function sv(k,v){ localStorage.setItem(k, JSON.stringify(v)); }
 function esc(s){ return (s==null?'':String(s)).replace(/[&<>]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c])); }
-
-fetch('tasks.json?t=' + Date.now())
-  .then(r => r.json())
-  .then(d => { DATA = d; absorb(); render(); })
-  .catch(e => {
-    document.getElementById('lanes').innerHTML =
-      '<p class="empty">读取 tasks.json 失败：' + esc(e.message) + '（本地打开需起个 http 服务，别用 file:// ）</p>';
-  });
-
-// 已同步进 tasks.json 的改动，清掉本地覆盖，保持 store 干净
-function absorb(){
-  let changed = false;
-  DATA.lanes.forEach(l => l.tasks.forEach(t => {
-    if (OVER[t.id] && OVER[t.id] === t.status){ delete OVER[t.id]; changed = true; }
-  }));
-  if (changed) save();
-
-  // 已经被真正从 tasks.json 删掉的条目，清掉本地删除标记
-  const alive = new Set();
-  DATA.lanes.forEach(l => l.tasks.forEach(t => alive.add(t.id)));
-  let dchanged = false;
-  Object.keys(DEL).forEach(id => { if (!alive.has(id)){ delete DEL[id]; dchanged = true; } });
-  if (dchanged) saveDel();
+function st(t){ return OVER[t.id] || t.status || 'todo'; }
+function isDel(id){ return !!DEL[id]; }
+function tagCls(s){
+  return s==='火花' ? 'k-h' : s==='在验' ? 'k-v' : s==='已毕业' ? 'k-g' : 'k-n';
 }
 
-function matches(t){
-  const s = st(t);
-  if (statusFilter !== 'all' && s !== statusFilter) return false;
-  if (ownerFilter !== 'all' && (t.owner||'') !== ownerFilter) return false;
-  return true;
+Promise.all([
+  fetch('tasks.json?t=' + Date.now()).then(r => r.json()),
+  fetch('ideas.json?t=' + Date.now()).then(r => r.ok ? r.json() : {ideas:[]}).catch(() => ({ideas:[]}))
+]).then(([d, i]) => { DATA = d; IDEAS = (i && i.ideas) || []; absorb(); render(); })
+  .catch(e => {
+    document.getElementById('projects').innerHTML =
+      '<p class="empty">读取 tasks.json 失败：' + esc(e.message) + '（本地打开需起 http 服务，别用 file://）</p>';
+  });
+
+function absorb(){
+  const all = [...(DATA.daily||[]), ...(DATA.projects||[])];
+  const alive = new Set(all.map(t => t.id));
+  let c = false;
+  Object.keys(OVER).forEach(id => {
+    if (!alive.has(id)) { delete OVER[id]; c = true; return; }
+    const t = all.find(x => x.id === id);
+    if (t && OVER[id] === (t.status || 'todo')) { delete OVER[id]; c = true; }
+  });
+  if (c) sv(LS_ST, OVER);
+  let d = false;
+  Object.keys(DEL).forEach(id => { if (!alive.has(id)) { delete DEL[id]; d = true; } });
+  if (d) sv(LS_DEL, DEL);
 }
 
 function render(){
-  const upd = document.getElementById('updated');
-  upd.textContent = '更新于 ' + (DATA.updated || '未知') + (DATA.updated_note ? ' · ' + DATA.updated_note : '');
-
-  const lanes = document.getElementById('lanes');
-  lanes.innerHTML = '';
-
-  DATA.lanes.forEach(lane => {
-    const visible = lane.tasks.filter(matches);
-    if (!visible.length) return;
-    const box = document.createElement('div'); box.className = 'lane';
-    const pending = visible.filter(t => st(t) !== 'done').length;
-    const h = document.createElement('h2');
-    h.appendChild(document.createTextNode(lane.title));
-    h.appendChild(Object.assign(document.createElement('span'), {className:'count', textContent: pending}));
-    box.appendChild(h);
-    box.appendChild(Object.assign(document.createElement('div'), {className:'sub', textContent: lane.subtitle || ''}));
-    visible.forEach(t => box.appendChild(card(t)));
-    lanes.appendChild(box);
-  });
-
-  if (!lanes.children.length) lanes.innerHTML = '<p class="empty">当前筛选下没有事项。</p>';
-  updateHeader(); updateSync();
+  document.getElementById('updated').textContent =
+    '更新于 ' + (DATA.updated || '未知') + (DATA.updated_note ? ' · ' + DATA.updated_note : '');
+  renderIdeas(); renderDaily(); renderProjects(); renderWatch(); updateSync();
 }
 
-function card(t){
-  const s = st(t);
-  const isPending = !!OVER[t.id];
-  const del = isDel(t.id);
-  const task = document.createElement('div');
-  task.className = 'task ' + (t.priority||'').toLowerCase() + (s==='done' ? ' done' : '') + (del ? ' deleted' : '');
-  task.dataset.id = t.id;
-
-  const top = document.createElement('div'); top.className = 't-top';
-  top.appendChild(Object.assign(document.createElement('span'), {className:'t-title', textContent: t.title}));
-  if (t.priority) top.appendChild(Object.assign(document.createElement('span'), {className:'badge b-'+(t.priority||'').toLowerCase(), textContent: t.priority}));
-  if (t.owner) top.appendChild(Object.assign(document.createElement('span'), {className:'badge '+(t.owner==='我'?'b-me':'b-you'), textContent: t.owner}));
-  if (s === 'blocked') top.appendChild(Object.assign(document.createElement('span'), {className:'badge b-blocked', textContent:'卡住'}));
-  if (del) top.appendChild(Object.assign(document.createElement('span'), {className:'badge b-del', textContent:'已标记删除'}));
-  if (isPending || del) top.appendChild(Object.assign(document.createElement('span'), {className:'pend', textContent:'●未同步'}));
-  const x = document.createElement('button');
-  x.className = 'del'; x.textContent = '×'; x.title = del ? '撤销删除标记' : '标记删除';
-  x.onclick = () => toggleDel(t.id);
-  top.appendChild(x);
-  task.appendChild(top);
-
-  if (del){
-    const u = document.createElement('button');
-    u.className = 'undo'; u.textContent = '撤销删除';
-    u.onclick = () => toggleDel(t.id);
-    task.appendChild(u);
-    return task;
+function renderIdeas(){
+  const box = document.getElementById('ideabox');
+  const body = document.getElementById('ideabody');
+  const foot = document.getElementById('ideafoot');
+  if (!IDEAS.length){
+    document.getElementById('ideacnt').textContent = '空';
+    body.innerHTML = '<p class="empty">点子池还没有条目。</p>';
+    foot.textContent = '';
+    return;
   }
+  const LIMIT = 4;
+  const open = box.classList.contains('open');
+  const show = open ? IDEAS : IDEAS.slice(0, LIMIT);
+  document.getElementById('ideacnt').textContent = IDEAS.length + ' 条';
+  body.innerHTML = show.map(x => '<div class="idea">' +
+      '<span class="d">' + esc(x.date) + '</span>' +
+      '<span class="ti">' + esc(x.title) + '</span>' +
+      '<span class="tag ' + tagCls(x.status) + '">' + esc(x.status) + '</span>' +
+    '</div>').join('');
+  if (IDEAS.length > LIMIT){
+    foot.innerHTML = open
+      ? '<a href="#" id="ideatoggle">收起 ▴</a>'
+      : '<a href="#" id="ideatoggle">看全部 ' + IDEAS.length + ' 条 →</a>';
+    const tg = document.getElementById('ideatoggle');
+    if (tg) tg.onclick = (e) => { e.preventDefault(); toggleIdeas(); };
+  } else {
+    foot.textContent = '';
+  }
+}
+function toggleIdeas(){
+  const box = document.getElementById('ideabox');
+  if (IDEAS.length <= 4) return;   // 全都在显示时折叠没有意义
+  box.classList.toggle('open');
+  document.getElementById('ideaarw').textContent = box.classList.contains('open') ? '▴' : '▾';
+  renderIdeas();
+}
+document.getElementById('ideahead').onclick = toggleIdeas;
 
-  const seg = document.createElement('div'); seg.className = 'seg';
-  [['todo','待开始'],['doing','进行中'],['done','已完成']].forEach(([k,label])=>{
-    const b = document.createElement('button');
-    b.className = 's-'+k + (s===k ? ' active' : '');
-    b.textContent = label; b.dataset.st = k;
-    b.onclick = () => setStatus(t.id, k);
-    seg.appendChild(b);
+function renderDaily(){
+  const wrap = document.getElementById('daily');
+  const list = DATA.daily || [];
+  wrap.innerHTML = '';
+  let done = 0;
+  list.forEach(t => {
+    const s = st(t);
+    if (s === 'done') done++;
+    const row = document.createElement('div');
+    row.className = 'drow' + (s === 'done' ? ' on' : '');
+    row.dataset.id = t.id;
+    const box = document.createElement('div');
+    box.className = 'dbox'; box.textContent = '✓';
+    box.onclick = () => setStatus(t.id, s === 'done' ? 'todo' : 'done');
+    const main = document.createElement('div'); main.className = 'dmain';
+    main.appendChild(Object.assign(document.createElement('div'), {className:'dt', textContent: t.title}));
+    if (t.note) main.appendChild(Object.assign(document.createElement('div'), {className:'dn', textContent: t.note}));
+    row.appendChild(box); row.appendChild(main);
+    wrap.appendChild(row);
   });
-  task.appendChild(seg);
-
-  const dt = document.createElement('button'); dt.className = 'dtoggle';
-  dt.textContent = '详情 ▾';
-  dt.onclick = () => { task.classList.toggle('open'); dt.textContent = task.classList.contains('open') ? '详情 ▴' : '详情 ▾'; };
-  task.appendChild(dt);
-
-  const detail = document.createElement('div'); detail.className = 'detail';
-  if (t.why) detail.appendChild(Object.assign(document.createElement('div'), {className:'why', textContent: t.why}));
-  if (t.note) detail.appendChild(Object.assign(document.createElement('div'), {className:'note', textContent: '⚠ ' + t.note}));
-  const foot = document.createElement('div'); foot.className = 'foot';
-  if (t.eta) foot.appendChild(Object.assign(document.createElement('span'), {textContent:'⏱ ' + t.eta}));
-  if (t.ref && t.ref !== '—') foot.appendChild(Object.assign(document.createElement('code'), {textContent: t.ref}));
-  detail.appendChild(foot);
-  task.appendChild(detail);
-
-  return task;
+  document.getElementById('dcnt').textContent = done + '/' + list.length + ' 今天';
 }
 
-function toggleDel(id){
-  if (DEL[id]) delete DEL[id];
-  else DEL[id] = 1;
-  saveDel();
-  render();
+function renderProjects(){
+  const wrap = document.getElementById('projects');
+  wrap.innerHTML = '';
+  (DATA.projects || []).forEach(t => {
+    const s = st(t);
+    const del = isDel(t.id);
+    const el = document.createElement('div');
+    el.className = 'proj ' + s + (del ? ' deleted' : '');
+    el.dataset.id = t.id;
+
+    const head = document.createElement('div'); head.className = 'phead';
+    head.appendChild(Object.assign(document.createElement('span'), {className:'ptitle', textContent: t.title}));
+    if (del) head.appendChild(Object.assign(document.createElement('span'), {className:'badge b-del', textContent:'已标记删除'}));
+    if (OVER[t.id] || del) head.appendChild(Object.assign(document.createElement('span'), {className:'pend', textContent:'●未同步'}));
+    const x = document.createElement('button');
+    x.className = 'x'; x.textContent = '×'; x.title = del ? '撤销删除标记' : '标记删除';
+    x.onclick = () => { if (DEL[t.id]) delete DEL[t.id]; else DEL[t.id] = 1; sv(LS_DEL, DEL); render(); };
+    head.appendChild(x);
+    el.appendChild(head);
+
+    if (del){
+      const u = document.createElement('button');
+      u.className = 'undo'; u.textContent = '撤销删除';
+      u.onclick = () => { delete DEL[t.id]; sv(LS_DEL, DEL); render(); };
+      el.appendChild(u);
+      wrap.appendChild(el);
+      return;
+    }
+
+    if (t.one_liner) el.appendChild(Object.assign(document.createElement('div'), {className:'pone', textContent: t.one_liner}));
+    if (t.blocker) {
+      const b = document.createElement('div'); b.className = 'blocker';
+      b.innerHTML = '<b>卡在：</b>' + esc(t.blocker);
+      el.appendChild(b);
+    }
+
+    const seg = document.createElement('div'); seg.className = 'seg';
+    [['todo','待开始'],['doing','进行中'],['done','已完成']].forEach(([k,label]) => {
+      const b = document.createElement('button');
+      b.className = 's-' + k + (s === k ? ' active' : '');
+      b.textContent = label; b.dataset.st = k;
+      b.onclick = () => setStatus(t.id, k);
+      seg.appendChild(b);
+    });
+    el.appendChild(seg);
+    wrap.appendChild(el);
+  });
+  const total = (DATA.projects || []).filter(t => !isDel(t.id)).length;
+  const doneN = (DATA.projects || []).filter(t => !isDel(t.id) && st(t) === 'done').length;
+  document.getElementById('pcnt').textContent = doneN + '/' + total;
+}
+
+function renderWatch(){
+  const wrap = document.getElementById('watch');
+  const list = DATA.watch || [];
+  wrap.innerHTML = list.length ? list.map(w => '<div class="wrow">' +
+      '<span class="wt">' + esc(w.title) + '</span>' +
+      '<span class="wn">' + esc(w.note || '') + '</span>' +
+    '</div>').join('') : '<p class="empty">观察池为空。</p>';
+  document.getElementById('wcnt').textContent = list.length + ' 条';
 }
 
 function setStatus(id, k){
-  OVER[id] = k; save();
-  const cardEl = document.querySelector('.task[data-id="'+id+'"]');
-  if (cardEl){
-    cardEl.classList.toggle('done', k === 'done');
-    cardEl.querySelectorAll('.seg button').forEach(b => b.classList.toggle('active', b.dataset.st === k));
-    const top = cardEl.querySelector('.t-top');
-    let dot = top.querySelector('.pend');
-    if (!dot){ dot = document.createElement('span'); dot.className = 'pend'; top.appendChild(dot); }
-    dot.textContent = '●未同步';
-  }
-  updateHeader(); updateSync();
+  OVER[id] = k; sv(LS_ST, OVER);
+  render();
 }
 
-function updateHeader(){
-  let total=0, todo=0, doing=0, done=0, del=0;
-  DATA.lanes.forEach(l => l.tasks.forEach(t => {
-    if (DEL[t.id]){ del++; return; }
-    total++; const s = st(t);
-    if (s==='done') done++; else if (s==='doing') doing++; else if (s==='todo') todo++; else if (s==='blocked') doing++; // blocked 计入未完成
-  }));
-  document.getElementById('summary').textContent =
-    `共 ${total} · 待开始 ${todo} · 进行中 ${doing} · 已完成 ${done}` + (del ? ` · 待删 ${del}` : '');
-}
-
-function pendingList(){
+function pendList(){
   const out = [];
-  DATA.lanes.forEach(l => l.tasks.forEach(t => { if (OVER[t.id]) out.push({id:t.id, title:t.title, from:t.status, to:OVER[t.id]}); }));
+  [...(DATA.daily||[]), ...(DATA.projects||[])].forEach(t => {
+    if (OVER[t.id]) out.push({id:t.id, title:t.title, from:(t.status||'todo'), to:OVER[t.id]});
+  });
   return out;
 }
-
 function delList(){
   const out = [];
-  DATA.lanes.forEach(l => l.tasks.forEach(t => { if (DEL[t.id]) out.push({id:t.id, title:t.title}); }));
+  [...(DATA.daily||[]), ...(DATA.projects||[])].forEach(t => { if (DEL[t.id]) out.push({id:t.id, title:t.title}); });
   return out;
 }
-
 function updateSync(){
-  const p = pendingList(), d = delList();
+  const p = pendList(), d = delList();
   const bar = document.getElementById('syncbar');
   if (!p.length && !d.length){ bar.classList.remove('show'); return; }
   bar.classList.add('show');
   const parts = [];
-  if (p.length) parts.push(`${p.length} 处状态改动`);
-  if (d.length) parts.push(`${d.length} 项待删除`);
+  if (p.length) parts.push(p.length + ' 处状态改动');
+  if (d.length) parts.push(d.length + ' 项待删除');
   document.getElementById('synctxt').textContent = parts.join(' + ') + ' 未同步到 tasks.json';
 }
 
 function buildCopyText(){
-  const p = pendingList(), d = delList();
-  let s = '【看板回传】请更新 tasks.json：\n';
-  let n = 0;
+  const p = pendList(), d = delList();
+  let s = '【看板回传】请更新 tasks.json：\n', n = 0;
   if (p.length){
     n++;
-    s += `\n${n}) 改 status：\n`;
-    p.forEach(x => { s += `- ${x.id} → ${x.to}   （${x.title}）\n`; });
+    s += '\n' + n + ') 改 status：\n';
+    p.forEach(x => { s += '- ' + x.id + ' → ' + x.to + '   （' + x.title + '）\n'; });
   }
   if (d.length){
     n++;
-    s += `\n${n}) 删除这些任务（整条从 tasks.json 移除）：\n`;
-    d.forEach(x => { s += `- ${x.id}   （${x.title}）\n`; });
+    s += '\n' + n + ') 删除这些条目（整条从 tasks.json 移除）：\n';
+    d.forEach(x => { s += '- ' + x.id + '   （' + x.title + '）\n'; });
   }
   s += '\n改完 push，我这边全设备生效。';
   return s;
@@ -337,35 +366,25 @@ document.getElementById('btnCopy').onclick = () => {
   const txt = buildCopyText();
   const done = () => showToast('已复制，贴给 AI 即可');
   if (navigator.clipboard && navigator.clipboard.writeText){
-    navigator.clipboard.writeText(txt).then(done).catch(()=>fallbackCopy(txt, done));
-  } else fallbackCopy(txt, done);
+    navigator.clipboard.writeText(txt).then(done).catch(() => fb(txt, done));
+  } else fb(txt, done);
 };
-function fallbackCopy(txt, cb){
+function fb(txt, cb){
   const ta = document.createElement('textarea');
   ta.value = txt; ta.style.position='fixed'; ta.style.opacity='0';
   document.body.appendChild(ta); ta.select();
-  try{ document.execCommand('copy'); cb(); }catch(e){ alert(txt); }
+  try { document.execCommand('copy'); cb(); } catch(e){ alert(txt); }
   document.body.removeChild(ta);
 }
 document.getElementById('btnDrop').onclick = () => {
   if (!confirm('丢弃全部本地改动（含删除标记），恢复成 tasks.json 里的状态？')) return;
-  OVER = {}; DEL = {}; save(); saveDel(); render();
+  OVER = {}; DEL = {}; sv(LS_ST, OVER); sv(LS_DEL, DEL); render();
 };
-
 function showToast(msg){
   const t = document.getElementById('toast');
   t.textContent = msg; t.classList.add('show');
-  setTimeout(()=>t.classList.remove('show'), 1600);
+  setTimeout(() => t.classList.remove('show'), 1600);
 }
-
-document.getElementById('statusFilter').addEventListener('click', e => {
-  if (e.target.dataset.f){ statusFilter = e.target.dataset.f;
-    [...e.currentTarget.querySelectorAll('button')].forEach(b=>b.classList.toggle('active', b===e.target)); render(); }
-});
-document.getElementById('ownerFilter').addEventListener('click', e => {
-  if (e.target.dataset.o){ ownerFilter = e.target.dataset.o;
-    [...e.currentTarget.querySelectorAll('button')].forEach(b=>b.classList.toggle('active', b===e.target)); render(); }
-});
 </script>
 </body>
 </html>
