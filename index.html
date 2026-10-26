@@ -18,6 +18,27 @@
   h1{font-size:18px;font-weight:600;letter-spacing:.3px}
   .meta{color:var(--muted);font-size:12px;margin-top:5px}
 
+  /* 产品方法论 · 常驻横幅（放在最上面，天天看得见） */
+  .creed{margin-top:10px;background:linear-gradient(180deg,rgba(163,113,247,.14),rgba(163,113,247,.05));
+    border:1px solid rgba(163,113,247,.42);border-radius:8px;padding:9px 11px}
+  .creed .cl{display:flex;align-items:baseline;gap:6px;margin-bottom:7px}
+  .creed .cl b{font-size:12.5px;color:var(--idea);font-weight:700;letter-spacing:.3px}
+  .creed .cl span{font-size:10.5px;color:var(--muted)}
+  .creed .steps{display:flex;flex-wrap:wrap;gap:6px}
+  .creed .st{display:flex;align-items:center;gap:5px;background:rgba(163,113,247,.1);
+    border:1px solid rgba(163,113,247,.28);border-radius:6px;padding:4px 9px}
+  .creed .st i{font-style:normal;font-size:10px;color:var(--idea);font-weight:700;opacity:.85}
+  .creed .st b{font-size:12.5px;font-weight:600;color:var(--text)}
+  .creed .st u{text-decoration:none;font-size:10.5px;color:var(--muted)}
+  @media (max-width:480px){
+    .creed{padding:8px 9px}
+    .creed .cl{flex-direction:column;gap:2px;margin-bottom:5px}
+    .creed .steps{display:grid;grid-template-columns:1fr 1fr;gap:5px}
+    .creed .st{flex-direction:row;align-items:baseline;gap:4px;padding:4px 7px}
+    .creed .st b{font-size:12px}
+    .creed .st u{display:none}          /* 手机上只留四步名称，详情省空间 */
+  }
+
   section{margin-bottom:18px}
   .sh{display:flex;align-items:center;gap:8px;margin-bottom:8px}
   .sh h2{font-size:14px;font-weight:600;letter-spacing:.5px}
@@ -109,6 +130,16 @@
 <header>
   <h1>今日待办 · 看板</h1>
   <div class="meta" id="updated">加载中…</div>
+
+  <div class="creed">
+    <div class="cl"><b>产品方法论 · 刘小排</b><span>收集抱怨 → 快速发布 → 频繁迭代 → 引发自传播</span></div>
+    <div class="steps">
+      <div class="st"><i>1</i><b>收集抱怨</b><u>听原话，不问要什么功能</u></div>
+      <div class="st"><i>2</i><b>快速发布</b><u>一周内让陌生人用上</u></div>
+      <div class="st"><i>3</i><b>频繁迭代</b><u>一次只改一个变量</u></div>
+      <div class="st"><i>4</i><b>引发自传播</b><u>用户愿意主动截图发群</u></div>
+    </div>
+  </div>
 </header>
 
 <div class="ideabox" id="ideabox">
