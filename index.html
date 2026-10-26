@@ -50,6 +50,14 @@
   .b-me{background:rgba(163,113,247,.15);color:var(--blocked)}
   .b-blocked{background:rgba(163,113,247,.2);color:var(--blocked)}
   .pend{color:var(--p1);font-size:10px;font-weight:700}
+  .del{background:none;border:none;color:#484f58;font-size:15px;line-height:1;
+    cursor:pointer;padding:1px 4px;border-radius:4px;margin-left:2px}
+  .del:hover{color:var(--p0);background:rgba(248,81,73,.12)}
+  .task.deleted{opacity:.45;border-left-color:var(--p0)}
+  .task.deleted .t-title{text-decoration:line-through;color:var(--p0)}
+  .undo{background:rgba(88,166,255,.14);border:1px solid var(--doing);color:var(--doing);
+    font-size:11.5px;padding:3px 10px;border-radius:5px;cursor:pointer;font-weight:600;margin-top:5px}
+  .b-del{background:rgba(248,81,73,.15);color:var(--p0)}
 
   .seg{display:flex;gap:5px;margin:7px 0 2px}
   .seg button{flex:1;padding:6px 0;font-size:12px;border:1px solid var(--border);
@@ -120,17 +128,23 @@
 
 <footer>
   点每张卡上的 <b>待开始 / 进行中 / 已完成</b> 直接改，改动存在本机浏览器，刷新不丢。<br>
+  右上角的 <b>×</b> 是删除：点一下打上「已标记删除」，再点一下撤销。<br>
   改完点底部「复制给 AI」→ 贴给 AI → 我更新 <code>tasks.json</code> 并 push，全设备生效。
 </footer>
 
 <script>
 const LS_KEY = 'todoboard.status.v1';
+const LS_DEL = 'todoboard.deleted.v1';
 let OVER = load();
+let DEL = loadDel();
 let DATA = null;
 let statusFilter = 'all', ownerFilter = 'all';
 
 function load(){ try{ return JSON.parse(localStorage.getItem(LS_KEY)) || {}; }catch(e){ return {}; } }
 function save(){ localStorage.setItem(LS_KEY, JSON.stringify(OVER)); }
+function loadDel(){ try{ return JSON.parse(localStorage.getItem(LS_DEL)) || {}; }catch(e){ return {}; } }
+function saveDel(){ localStorage.setItem(LS_DEL, JSON.stringify(DEL)); }
+function isDel(id){ return !!DEL[id]; }
 function st(t){ return OVER[t.id] || t.status; }
 function esc(s){ return (s==null?'':String(s)).replace(/[&<>]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c])); }
 
@@ -149,6 +163,13 @@ function absorb(){
     if (OVER[t.id] && OVER[t.id] === t.status){ delete OVER[t.id]; changed = true; }
   }));
   if (changed) save();
+
+  // 已经被真正从 tasks.json 删掉的条目，清掉本地删除标记
+  const alive = new Set();
+  DATA.lanes.forEach(l => l.tasks.forEach(t => alive.add(t.id)));
+  let dchanged = false;
+  Object.keys(DEL).forEach(id => { if (!alive.has(id)){ delete DEL[id]; dchanged = true; } });
+  if (dchanged) saveDel();
 }
 
 function matches(t){
@@ -186,8 +207,9 @@ function render(){
 function card(t){
   const s = st(t);
   const isPending = !!OVER[t.id];
+  const del = isDel(t.id);
   const task = document.createElement('div');
-  task.className = 'task ' + (t.priority||'').toLowerCase() + (s==='done' ? ' done' : '');
+  task.className = 'task ' + (t.priority||'').toLowerCase() + (s==='done' ? ' done' : '') + (del ? ' deleted' : '');
   task.dataset.id = t.id;
 
   const top = document.createElement('div'); top.className = 't-top';
@@ -195,8 +217,21 @@ function card(t){
   if (t.priority) top.appendChild(Object.assign(document.createElement('span'), {className:'badge b-'+(t.priority||'').toLowerCase(), textContent: t.priority}));
   if (t.owner) top.appendChild(Object.assign(document.createElement('span'), {className:'badge '+(t.owner==='我'?'b-me':'b-you'), textContent: t.owner}));
   if (s === 'blocked') top.appendChild(Object.assign(document.createElement('span'), {className:'badge b-blocked', textContent:'卡住'}));
-  if (isPending) top.appendChild(Object.assign(document.createElement('span'), {className:'pend', textContent:'●未同步'}));
+  if (del) top.appendChild(Object.assign(document.createElement('span'), {className:'badge b-del', textContent:'已标记删除'}));
+  if (isPending || del) top.appendChild(Object.assign(document.createElement('span'), {className:'pend', textContent:'●未同步'}));
+  const x = document.createElement('button');
+  x.className = 'del'; x.textContent = '×'; x.title = del ? '撤销删除标记' : '标记删除';
+  x.onclick = () => toggleDel(t.id);
+  top.appendChild(x);
   task.appendChild(top);
+
+  if (del){
+    const u = document.createElement('button');
+    u.className = 'undo'; u.textContent = '撤销删除';
+    u.onclick = () => toggleDel(t.id);
+    task.appendChild(u);
+    return task;
+  }
 
   const seg = document.createElement('div'); seg.className = 'seg';
   [['todo','待开始'],['doing','进行中'],['done','已完成']].forEach(([k,label])=>{
@@ -225,6 +260,13 @@ function card(t){
   return task;
 }
 
+function toggleDel(id){
+  if (DEL[id]) delete DEL[id];
+  else DEL[id] = 1;
+  saveDel();
+  render();
+}
+
 function setStatus(id, k){
   OVER[id] = k; save();
   const cardEl = document.querySelector('.task[data-id="'+id+'"]');
@@ -240,13 +282,14 @@ function setStatus(id, k){
 }
 
 function updateHeader(){
-  let total=0, todo=0, doing=0, done=0;
+  let total=0, todo=0, doing=0, done=0, del=0;
   DATA.lanes.forEach(l => l.tasks.forEach(t => {
+    if (DEL[t.id]){ del++; return; }
     total++; const s = st(t);
     if (s==='done') done++; else if (s==='doing') doing++; else if (s==='todo') todo++; else if (s==='blocked') doing++; // blocked 计入未完成
   }));
   document.getElementById('summary').textContent =
-    `共 ${total} · 待开始 ${todo} · 进行中 ${doing} · 已完成 ${done}`;
+    `共 ${total} · 待开始 ${todo} · 进行中 ${doing} · 已完成 ${done}` + (del ? ` · 待删 ${del}` : '');
 }
 
 function pendingList(){
@@ -255,19 +298,38 @@ function pendingList(){
   return out;
 }
 
+function delList(){
+  const out = [];
+  DATA.lanes.forEach(l => l.tasks.forEach(t => { if (DEL[t.id]) out.push({id:t.id, title:t.title}); }));
+  return out;
+}
+
 function updateSync(){
-  const p = pendingList();
+  const p = pendingList(), d = delList();
   const bar = document.getElementById('syncbar');
-  if (!p.length){ bar.classList.remove('show'); return; }
+  if (!p.length && !d.length){ bar.classList.remove('show'); return; }
   bar.classList.add('show');
-  document.getElementById('synctxt').textContent = `${p.length} 处改动未同步到 tasks.json`;
+  const parts = [];
+  if (p.length) parts.push(`${p.length} 处状态改动`);
+  if (d.length) parts.push(`${d.length} 项待删除`);
+  document.getElementById('synctxt').textContent = parts.join(' + ') + ' 未同步到 tasks.json';
 }
 
 function buildCopyText(){
-  const p = pendingList();
-  let s = '【看板状态回传】请把 tasks.json 里这些任务的 status 改掉：\n';
-  p.forEach(x => { s += `- ${x.id} → ${x.to}   （${x.title}）\n`; });
-  s += '改完 push，我这边全设备生效。';
+  const p = pendingList(), d = delList();
+  let s = '【看板回传】请更新 tasks.json：\n';
+  let n = 0;
+  if (p.length){
+    n++;
+    s += `\n${n}) 改 status：\n`;
+    p.forEach(x => { s += `- ${x.id} → ${x.to}   （${x.title}）\n`; });
+  }
+  if (d.length){
+    n++;
+    s += `\n${n}) 删除这些任务（整条从 tasks.json 移除）：\n`;
+    d.forEach(x => { s += `- ${x.id}   （${x.title}）\n`; });
+  }
+  s += '\n改完 push，我这边全设备生效。';
   return s;
 }
 
@@ -286,8 +348,8 @@ function fallbackCopy(txt, cb){
   document.body.removeChild(ta);
 }
 document.getElementById('btnDrop').onclick = () => {
-  if (!confirm('丢弃全部本地改动，恢复成 tasks.json 里的状态？')) return;
-  OVER = {}; save(); render();
+  if (!confirm('丢弃全部本地改动（含删除标记），恢复成 tasks.json 里的状态？')) return;
+  OVER = {}; DEL = {}; save(); saveDel(); render();
 };
 
 function showToast(msg){
