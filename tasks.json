@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-27T07:00:00+08:00",
-  "updated_note": "p-adult 卡点由「切入点」改为「收款」；p-pdf 定价分析已完成但隧道仍 502；每日固定重置新一天",
+  "updated": "2026-10-27T11:47:00+08:00",
+  "updated_note": "d-shengcai → done；d-english 保持 todo（Hermes 回传）",
   "daily": [
     {
       "id": "d-post",
@@ -18,7 +18,7 @@
       "id": "d-shengcai",
       "title": "生财有术",
       "note": "每天看 1–2 个人 · 时间浮动",
-      "status": "todo"
+      "status": "done"
     }
   ],
   "projects": [
