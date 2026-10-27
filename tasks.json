@@ -1,12 +1,12 @@
 {
-  "updated": "2026-10-27T12:50:00+08:00",
-  "updated_note": "d-english → done（Hermes 回传）；三条每日固定全部完成",
+  "updated": "2026-10-27T15:24:00+08:00",
+  "updated_note": "d-post → done（Hermes 回传）；三条每日固定全部完成",
   "daily": [
     {
       "id": "d-post",
       "title": "发文章 / 发视频",
       "note": "每天必发 · 时间浮动",
-      "status": "todo"
+      "status": "done"
     },
     {
       "id": "d-english",
