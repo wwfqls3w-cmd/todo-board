@@ -1,24 +1,24 @@
 {
-  "updated": "2026-10-27T15:24:00+08:00",
-  "updated_note": "d-post → done（Hermes 回传）；三条每日固定全部完成",
+  "updated": "2026-10-28T07:00:00+08:00",
+  "updated_note": "GEO 卡点从「拿不到 key 价」改为「三个待拍板」；成人卡点收窄为「两封信」；每日固定重置",
   "daily": [
     {
       "id": "d-post",
       "title": "发文章 / 发视频",
       "note": "每天必发 · 时间浮动",
-      "status": "done"
+      "status": "todo"
     },
     {
       "id": "d-english",
       "title": "英语学习（精听 + 泛听）",
       "note": "精听 30–60 分钟雷打不动 · 泛听随时（开车/碎片时间，可多选：播客/新闻/影视/YouTube）",
-      "status": "done"
+      "status": "todo"
     },
     {
       "id": "d-shengcai",
       "title": "生财有术",
       "note": "每天看 1–2 个人 · 时间浮动",
-      "status": "done"
+      "status": "todo"
     }
   ],
   "projects": [
@@ -26,14 +26,14 @@
       "id": "p-geo",
       "title": "GEO 自动化系统（主产品）",
       "one_liner": "软件免费 + 只收 token，做成「从获客到使用」全自动的一套；国内 + 海外两个市场，新一 + 彩虹桥当第一个案例",
-      "blocker": "拿不到官方 key 价——郑总那条线没定，成本结构就不成立",
+      "blocker": "1.0 三份文档已交付（三档 3,980/9,800/19,800，后两档毛利 77%），卡点从「拿不到 key 价」变成「三个待拍板 + 两个必跑实验都没跑」，1.1 报价单出不来",
       "status": "doing"
     },
     {
       "id": "p-adult",
       "title": "海外 · 成人赛道",
       "one_liner": "第二条腿，与主产品同步推进，不等 GEO 跑通",
-      "blocker": "硬卡点只剩收款——Payoneer 认证中；G1 12/12、G3 30/30 已过，首封触达连续三天没发",
+      "blocker": "收款已通（Payoneer 10-27 获批、G1 12/12 过），硬卡点只剩两封没发的信——G2 问询 + 首封触达，截至 10-27 已连续第四天",
       "status": "doing"
     },
     {
