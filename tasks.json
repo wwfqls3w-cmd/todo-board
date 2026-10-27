@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-27T11:47:00+08:00",
-  "updated_note": "d-shengcai → done；d-english 保持 todo（Hermes 回传）",
+  "updated": "2026-10-27T12:50:00+08:00",
+  "updated_note": "d-english → done（Hermes 回传）；三条每日固定全部完成",
   "daily": [
     {
       "id": "d-post",
@@ -12,7 +12,7 @@
       "id": "d-english",
       "title": "英语学习（精听 + 泛听）",
       "note": "精听 30–60 分钟雷打不动 · 泛听随时（开车/碎片时间，可多选：播客/新闻/影视/YouTube）",
-      "status": "todo"
+      "status": "done"
     },
     {
       "id": "d-shengcai",
