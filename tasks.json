@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-28T07:00:00+08:00",
+  "updated": "2026-10-28T15:26:38+08:00",
   "updated_note": "GEO 卡点从「拿不到 key 价」改为「三个待拍板」；成人卡点收窄为「两封信」；每日固定重置",
   "daily": [
     {
@@ -12,13 +12,13 @@
       "id": "d-english",
       "title": "英语学习（精听 + 泛听）",
       "note": "精听 30–60 分钟雷打不动 · 泛听随时（开车/碎片时间，可多选：播客/新闻/影视/YouTube）",
-      "status": "todo"
+      "status": "done"
     },
     {
       "id": "d-shengcai",
       "title": "生财有术",
       "note": "每天看 1–2 个人 · 时间浮动",
-      "status": "todo"
+      "status": "done"
     }
   ],
   "projects": [
