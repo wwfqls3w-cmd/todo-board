@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-29T07:05:00+08:00",
+  "updated": "2026-10-29T11:25:51+08:00",
   "updated_note": "GEO 卡点从「三个待拍板」改为「三件已知道该做但没做」：OpenGeo 正式部署 / 1.0 三处硬伤 / 实验1；成人两封信连续第五天；daily 三条重置",
   "daily": [
     {
@@ -12,13 +12,13 @@
       "id": "d-english",
       "title": "英语学习（精听 + 泛听）",
       "note": "精听 30–60 分钟雷打不动 · 泛听随时（开车/碎片时间，可多选：播客/新闻/影视/YouTube）",
-      "status": "todo"
+      "status": "done"
     },
     {
       "id": "d-shengcai",
       "title": "生财有术",
       "note": "每天看 1–2 个人 · 时间浮动",
-      "status": "todo"
+      "status": "done"
     }
   ],
   "projects": [
