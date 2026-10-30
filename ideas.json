@@ -1,8 +1,15 @@
 {
-  "updated": "2026-10-30T07:00:19+08:00",
+  "updated": "2026-10-30T18:58:34+08:00",
   "source": "D:/workspace/raw/notes/点子池.md",
-  "count": 5,
+  "count": 6,
   "ideas": [
+    {
+      "id": "idea-2026-10-30-Codex-Obsidian",
+      "date": "2026-10-30",
+      "title": "Codex + Obsidian = 把散落的经验变成能反复用的资产",
+      "status": "在验",
+      "one_liner": "**Codex + Obsidian（或 Claude + wiki）不是工具组合，是「经验资产化」的一条生产线**：把一个人散在脑子和文件里的经验，变成能被 AI 反复调用、反复产出的资产。卖的不是软件，是「你那些没沉淀下来的经验，现在能变成资产了」这个结果。"
+    },
     {
       "id": "idea-2026-10-29-",
       "date": "2026-10-29",
