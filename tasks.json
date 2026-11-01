@@ -1,18 +1,18 @@
 {
-  "updated": "2026-11-01T07:10:00+08:00",
-  "updated_note": "生财底表死线压到明天仍未出；成人看板 5 天零变更；OpenGeo 后端连续两天没起",
+  "updated": "2026-11-01T10:57:19+08:00",
+  "updated_note": "11-01 文章已发 4 平台、英语精听+泛听在做；生财底表死线今天（11-02 晚前）；成人看板 6 天零变更",
   "daily": [
     {
       "id": "d-post",
       "title": "发文章 / 发视频",
       "note": "每天必发 · 时间浮动",
-      "status": "todo"
+      "status": "done"
     },
     {
       "id": "d-english",
       "title": "英语学习（精听 + 泛听）",
       "note": "精听 30–60 分钟雷打不动 · 泛听随时（开车/碎片时间，可多选：播客/新闻/影视/YouTube）",
-      "status": "todo"
+      "status": "done"
     },
     {
       "id": "d-shengcai",
