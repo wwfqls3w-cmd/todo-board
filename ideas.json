@@ -1,7 +1,7 @@
 {
-  "updated": "2026-11-02T18:57:09+08:00",
+  "updated": "2026-11-02T19:06:27+08:00",
   "source": "D:/workspace/raw/notes/点子池.md",
-  "count": 11,
+  "count": 12,
   "ideas": [
     {
       "id": "idea-2026-11-02-",
@@ -37,6 +37,13 @@
       "title": "只找增量市场，不在存量里硬拼",
       "status": "已毕业",
       "one_liner": "要去找增量市场，不要在非增量市场上面努力——那一定会撞得头破血流。"
+    },
+    {
+      "id": "idea-2026-11-02-skill",
+      "date": "2026-11-02",
+      "title": "借女娲.skill 的逻辑做英语方法包",
+      "status": "火花",
+      "one_liner": "网上开源的「女娲.skill」（`alchaincyf/nuwa-skill`，MIT，35.8k star）是「造 skill 的 skill」——源码全公开。它蒸馏的是**一个人的认知**（表达DNA/心智模型/决策启发式/反模式/诚实边界五层）。我那套英语方法要借它的**方法**，不能借它的**形态**。"
     },
     {
       "id": "idea-2026-10-30-Codex-Obsidian",
