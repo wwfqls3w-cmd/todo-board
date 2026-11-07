@@ -1,6 +1,6 @@
 {
   "date": "2026-11-07",
-  "fetched_at": "2026-11-07T20:47:01+08:00",
+  "fetched_at": "2026-11-07T22:22:18+08:00",
   "limit_per_site": 6,
   "sources": {
     "producthunt": [
@@ -13,20 +13,6 @@
       },
       {
         "source": "producthunt",
-        "title": "GPT‑6 Cyber",
-        "url": "https://www.producthunt.com/products/openai",
-        "desc": "",
-        "published": ""
-      },
-      {
-        "source": "producthunt",
-        "title": "Google Omni 1.2 Flash",
-        "url": "https://www.producthunt.com/products/google-omni-1-2-flash",
-        "desc": "",
-        "published": ""
-      },
-      {
-        "source": "producthunt",
         "title": "seam",
         "url": "https://www.producthunt.com/products/seam-2",
         "desc": "",
@@ -34,15 +20,29 @@
       },
       {
         "source": "producthunt",
-        "title": "ClarifierAI for Chrome",
-        "url": "https://www.producthunt.com/products/clarifierai-rewrite-text-2",
+        "title": "Exa Monitors v2",
+        "url": "https://www.producthunt.com/products/exa-ai",
         "desc": "",
         "published": ""
       },
       {
         "source": "producthunt",
-        "title": "Standflow",
-        "url": "https://www.producthunt.com/products/standflow",
+        "title": "Instagram Edits for Desktop",
+        "url": "https://www.producthunt.com/products/instagram",
+        "desc": "",
+        "published": ""
+      },
+      {
+        "source": "producthunt",
+        "title": "ChatGPT Images 2.6",
+        "url": "https://www.producthunt.com/products/openai",
+        "desc": "",
+        "published": ""
+      },
+      {
+        "source": "producthunt",
+        "title": "Capnot",
+        "url": "https://www.producthunt.com/products/capnot",
         "desc": "",
         "published": ""
       }
@@ -50,28 +50,37 @@
     "hn_show": [
       {
         "source": "hn_show",
-        "title": "Show HN: An online shop where your friends can hurry the courier",
-        "url": "https://news.ycombinator.com/item?id=50403954",
-        "score": 5,
-        "comments": 0,
-        "published": "2026-11-07",
-        "by": "AmsterErdo"
-      },
-      {
-        "source": "hn_show",
         "title": "Show HN: Spindle – a full-featured, type-safe web framework for OCaml 5",
         "url": "https://news.ycombinator.com/item?id=50377613",
-        "score": 4,
-        "comments": 0,
+        "score": 15,
+        "comments": 4,
         "published": "2026-11-05",
         "by": "zaiev"
       },
       {
         "source": "hn_show",
+        "title": "Show HN: Logo Deal – Logos anyone can edit with text",
+        "url": "https://news.ycombinator.com/item?id=50404321",
+        "score": 2,
+        "comments": 0,
+        "published": "2026-11-07",
+        "by": "vednig"
+      },
+      {
+        "source": "hn_show",
+        "title": "Show HN: An online shop where your friends can hurry the courier",
+        "url": "https://news.ycombinator.com/item?id=50403954",
+        "score": 6,
+        "comments": 2,
+        "published": "2026-11-07",
+        "by": "AmsterErdo"
+      },
+      {
+        "source": "hn_show",
         "title": "Show HN: Waymark – A workflow engine that compiles jobs instead of replaying",
         "url": "https://news.ycombinator.com/item?id=50379221",
-        "score": 77,
-        "comments": 23,
+        "score": 78,
+        "comments": 24,
         "published": "2026-11-05",
         "by": "icyfox"
       },
@@ -79,7 +88,7 @@
         "source": "hn_show",
         "title": "Show HN: Tmux-restore saves tmux windows and agent sessions across reboots",
         "url": "https://news.ycombinator.com/item?id=50355009",
-        "score": 43,
+        "score": 47,
         "comments": 32,
         "published": "2026-11-03",
         "by": "boldi"
@@ -88,19 +97,10 @@
         "source": "hn_show",
         "title": "Show HN: Retex, a Faster LaTeX Engine",
         "url": "https://news.ycombinator.com/item?id=50403249",
-        "score": 2,
+        "score": 3,
         "comments": 0,
         "published": "2026-11-07",
         "by": "skadge"
-      },
-      {
-        "source": "hn_show",
-        "title": "Show HN: I taught my Fujifilm X-T30 II to print on an instax Link 3 over BLE",
-        "url": "https://news.ycombinator.com/item?id=50403007",
-        "score": 4,
-        "comments": 0,
-        "published": "2026-11-07",
-        "by": "j_leboulanger"
       }
     ],
     "seobox": {
