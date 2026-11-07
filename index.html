@@ -9,6 +9,7 @@
     --bg:#0d1117; --card:#161b22; --border:#30363d; --text:#e6edf3;
     --muted:#8b949e; --doing:#58a6ff; --done:#3fb950; --warn:#d29922;
     --idea:#a371f7; --p0:#f85149;
+    --ph:#ff6150; --hn:#ff6600; --toolify:#7ee0c0; --seo:#3fb950;
   }
   *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
   body{background:var(--bg);color:var(--text);
@@ -124,12 +125,51 @@
   .toast.show{opacity:1}
   .empty{color:var(--muted);font-size:12.5px;font-style:italic;padding:10px 12px}
   footer{margin-top:18px;color:var(--muted);font-size:11px;text-align:center;line-height:1.8}
+
+  /* ===== 顶部页面切换（待办 / 最新动态）===== */
+  .tabs{display:flex;gap:6px;margin:12px 0 2px}
+  .tab{flex:1;text-align:center;padding:9px 0;font-size:13.5px;font-weight:600;
+    border:1px solid var(--border);border-radius:8px;background:var(--card);
+    color:var(--muted);cursor:pointer;letter-spacing:.5px;user-select:none}
+  .tab.active{background:rgba(88,166,255,.14);color:var(--doing);border-color:var(--doing)}
+  .tab .dot{display:inline-block;width:7px;height:7px;border-radius:50%;
+    background:var(--p0);margin-left:6px;vertical-align:2px}
+  .pane{display:none}
+  .pane.show{display:block}
+
+  /* 最新动态页 */
+  .dgroup{margin-bottom:16px}
+  .dhead{display:flex;align-items:center;gap:8px;margin-bottom:7px}
+  .dhead h3{font-size:13px;font-weight:600;letter-spacing:.3px}
+  .dhead .badge{font-size:10px;padding:1px 7px;border-radius:10px;background:var(--border);color:var(--muted);font-weight:600}
+  .dlist{background:var(--card);border:1px solid var(--border);border-radius:8px;overflow:hidden}
+  .ditem{display:flex;gap:9px;padding:9px 11px;border-bottom:1px solid rgba(48,54,61,.55);align-items:flex-start}
+  .ditem:last-child{border-bottom:none}
+  .ditem .hot{flex-shrink:0;font-size:11px;font-weight:700;color:var(--hn);min-width:38px;text-align:right;padding-top:1px}
+  .ditem .dm{flex:1;min-width:0}
+  .ditem a{color:var(--text);text-decoration:none;font-size:13px;font-weight:500;line-height:1.4;word-break:break-word}
+  .ditem a:hover{color:var(--doing)}
+  .ditem .ds{color:var(--muted);font-size:11.5px;margin-top:2px;line-height:1.45}
+  .ditem .dst{color:var(--muted);font-size:10.5px;margin-top:2px}
+  .dmeta{color:var(--muted);font-size:11px;margin:8px 0 14px;line-height:1.6}
+  .dmeta a{color:var(--doing);text-decoration:none}
+  .dst .src{display:inline-block;font-size:10px;padding:0 5px;border-radius:3px;margin-right:5px;font-weight:600}
+  .src.ph{color:var(--ph);background:rgba(255,97,80,.12)}
+  .src.hn{color:var(--hn);background:rgba(255,102,0,.12)}
+  .src.toolify{color:var(--toolify);background:rgba(126,224,192,.12)}
+  .src.seo{color:var(--seo);background:rgba(63,185,80,.12)}
 </style>
 </head>
 <body>
 <header>
   <h1>今日待办 · 看板</h1>
   <div class="meta" id="updated">加载中…</div>
+
+  <!-- 页面切换：待办 / 最新动态 -->
+  <div class="tabs">
+    <div class="tab active" id="tab-todo" onclick="switchTab('todo')">📋 今日待办</div>
+    <div class="tab" id="tab-digest" onclick="switchTab('digest')">🆕 最新动态<span class="dot" id="digest-dot" style="display:none"></span></div>
+  </div>
 
   <div class="creed">
     <div class="cl">
@@ -153,6 +193,7 @@
   </div>
 </header>
 
+<div class="pane show" id="pane-todo">
 <div class="ideabox" id="ideabox">
   <div class="ideahead" id="ideahead">
     <span class="t">💡 最近点子</span>
@@ -178,6 +219,13 @@
   <div class="watch" id="watch"></div>
 </section>
 
+</div><!-- /pane-todo -->
+
+<div class="pane" id="pane-digest">
+  <div id="digest-meta" class="dmeta">加载中…</div>
+  <div id="digest-body"></div>
+</div>
+
 <div class="syncbar" id="syncbar">
   <span class="txt" id="synctxt"></span>
   <button class="btn-copy" id="btnCopy">复制给 AI</button>
@@ -188,6 +236,7 @@
 
 <footer>
   每天固定打勾即可，没有进度概念。项目点 <b>待开始 / 进行中 / 已完成</b>，改动存本机，刷新不丢。<br>
+  最新动态：Product Hunt / HN Show / Toolify / SEO.box 每日一抓（TAAFT 被 Cloudflare 封锁已剔除）。<br>
   <b>×</b> 是删除：点一下打标记，再点一下撤销。改完点底部「复制给 AI」→ 贴给我 → 我改 <code>tasks.json</code> 并 push。<br>
   点子池来自 <code>raw/notes/点子池.md</code>，每天 07:00 自动同步到看板。
 </footer>
@@ -195,7 +244,7 @@
 <script>
 const LS_ST = 'todoboard.v2.status';
 const LS_DEL = 'todoboard.v2.deleted';
-let OVER = ld(LS_ST), DEL = ld(LS_DEL), DATA = null, IDEAS = [];
+let OVER = ld(LS_ST), DEL = ld(LS_DEL), DATA = null, IDEAS = [], DIGEST = null;
 
 function ld(k){ try{ return JSON.parse(localStorage.getItem(k)) || {}; }catch(e){ return {}; } }
 function sv(k,v){ localStorage.setItem(k, JSON.stringify(v)); }
@@ -208,8 +257,9 @@ function tagCls(s){
 
 Promise.all([
   fetch('tasks.json?t=' + Date.now()).then(r => r.json()),
-  fetch('ideas.json?t=' + Date.now()).then(r => r.ok ? r.json() : {ideas:[]}).catch(() => ({ideas:[]}))
-]).then(([d, i]) => { DATA = d; IDEAS = (i && i.ideas) || []; absorb(); render(); })
+  fetch('ideas.json?t=' + Date.now()).then(r => r.ok ? r.json() : {ideas:[]}).catch(() => ({ideas:[]})),
+  fetch('digest_latest.json?t=' + Date.now()).then(r => r.ok ? r.json() : null).catch(() => null)
+]).then(([d, i, g]) => { DATA = d; IDEAS = (i && i.ideas) || []; DIGEST = g; absorb(); render(); })
   .catch(e => {
     document.getElementById('projects').innerHTML =
       '<p class="empty">读取 tasks.json 失败：' + esc(e.message) + '（本地打开需起 http 服务，别用 file://）</p>';
@@ -233,7 +283,109 @@ function absorb(){
 function render(){
   document.getElementById('updated').textContent =
     '更新于 ' + (DATA.updated || '未知') + (DATA.updated_note ? ' · ' + DATA.updated_note : '');
-  renderIdeas(); renderDaily(); renderProjects(); renderWatch(); updateSync();
+  renderIdeas(); renderDaily(); renderProjects(); renderWatch(); updateSync(); renderDigest();
+}
+
+/* ===== 页面切换 ===== */
+function switchTab(which){
+  document.getElementById('tab-todo').classList.toggle('active', which === 'todo');
+  document.getElementById('tab-digest').classList.toggle('active', which === 'digest');
+  document.getElementById('pane-todo').classList.toggle('show', which === 'todo');
+  document.getElementById('pane-digest').classList.toggle('show', which === 'digest');
+  if (which === 'digest'){
+    // 用户真正切到「最新动态」才标记已读，红点才能起到提醒作用
+    if (DIGEST) localStorage.setItem('todoboard.digest.date', DIGEST.date);
+    markDigestDot();
+  }
+}
+// 看板打开时若 digest 是新的（还没读过），就在「最新动态」tab 上亮红点
+function markDigestDot(){
+  const dot = document.getElementById('digest-dot');
+  if (!dot) return;
+  if (!DIGEST){ dot.style.display = 'none'; return; }
+  const seen = localStorage.getItem('todoboard.digest.date');
+  dot.style.display = (seen === DIGEST.date) ? 'none' : 'inline-block';
+}
+
+/* ===== 最新动态（daily-digest）===== */
+function renderDigest(){
+  const meta = document.getElementById('digest-meta');
+  const body = document.getElementById('digest-body');
+  markDigestDot();
+  if (!DIGEST){
+    meta.textContent = '暂无数据——每天采集一次（fetch_digest.py），TAAFT 被 Cloudflare 封锁已剔除。';
+    body.innerHTML = '';
+    return;
+  }
+  const s = DIGEST.sources || {};
+  meta.innerHTML = '更新于 <b>' + esc(DIGEST.fetched_at || DIGEST.date) + '</b> · 每站最多 '
+    + esc(DIGEST.limit_per_site || 8) + ' 条 · '
+    + '来源：<a href="https://www.producthunt.com/feed" target="_blank">Product Hunt</a> · '
+    + '<a href="https://news.ycombinator.com/show" target="_blank">HN /show</a> · '
+    + '<a href="https://www.toolify.ai/" target="_blank">Toolify</a> · '
+    + '<a href="https://seo.box/" target="_blank">seo.box</a>'
+    + '<br>源脚本 tools/daily-digest/fetch_digest.py · 数据 digest_'
+    + esc(DIGEST.date) + '.json';
+
+  const groups = [];
+
+  // Product Hunt
+  const ph = s.producthunt;
+  if (Array.isArray(ph) && ph.length){
+    groups.push(['Product Hunt · 最新产品', 'ph', ph.map(x => ({
+      title: x.title, url: x.url, desc: x.desc, extra: 'PH'
+    }))]);
+  }
+
+  // HN Show
+  const hn = s.hn_show;
+  if (Array.isArray(hn) && hn.length){
+    groups.push(['Hacker News · Show HN', 'hn', hn.map(x => ({
+      title: x.title, url: x.url,
+      desc: (x.score ? '▲ ' + x.score + ' 分' : '') + (x.comments ? ' · ' + x.comments + ' 评论' : '')
+            + (x.by ? ' · by ' + x.by : ''),
+      extra: 'HN'
+    }))]);
+  }
+
+  // Toolify
+  const tf = s.toolify;
+  if (Array.isArray(tf) && tf.length){
+    groups.push(['Toolify · 新增 AI 工具', 'toolify', tf.map(x => ({
+      title: x.title, url: x.url, desc: (x.lastmod ? '更新 ' + x.lastmod : ''), extra: 'Toolify'
+    }))]);
+  }
+
+  // seo.box
+  const sb = s.seobox;
+  if (sb && !sb.error){
+    groups.push(['SEO.box · 工具目录', 'seo', [{
+      title: sb.title, url: sb.url, desc: sb.desc + (sb.hash ? '（哈希 ' + sb.hash + '）' : ''), extra: 'SEO'
+    }]]);
+  }
+
+  if (!groups.length){
+    body.innerHTML = '<p class="empty">没有可展示的条目（各源可能都失败了，看 digest JSON 的错误字段）。</p>';
+    return;
+  }
+
+  body.innerHTML = groups.map(([title, cls, items]) =>
+    '<div class="dgroup">' +
+      '<div class="dhead"><h3>' + title + '</h3><span class="badge">' + items.length + '</span></div>' +
+      '<div class="dlist">' + items.map(it =>
+        '<div class="ditem">' +
+          '<span class="hot">' + (it.hot || '') + '</span>' +
+          '<div class="dm">' +
+            '<a href="' + esc(it.url) + '" target="_blank" rel="noopener">' + esc(it.title) + '</a>' +
+            (it.desc ? '<div class="ds">' + esc(it.desc) + '</div>' : '') +
+            '<div class="dst"><span class="src ' + cls + '">' + cls + '</span>'
+              + (it.extra ? esc(it.extra) : '') + '</div>' +
+          '</div>' +
+        '</div>').join('') +
+      '</div>' +
+    '</div>').join('');
+
+  markDigestDot();
 }
 
 function renderIdeas(){

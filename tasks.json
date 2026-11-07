@@ -1,11 +1,17 @@
 {
-  "updated": "2026-11-07T08:30:00+08:00",
-  "updated_note": "11-07 08:30：11-06 晚八份 GEO 材料收口落进看板——p-geo 首月交付清单定稿（新增信源池测绘一步、报价不变、对外只说 1-3 个月）；众拓打法定为先打「船舶行业机床定制厂家推荐」单引擎单词、B2B 该写榜单，D1 那条微信仍没发",
+  "updated": "2026-11-07T20:50:00+08:00",
+  "updated_note": "11-07 20:50：看板新增「最新动态」标签页 + 每日待办加「看最新动态」项——Product Hunt / HN Show / Toolify / SEO.box 每日一抓（tools/daily-digest/fetch_digest.py，TAAFT 被 Cloudflare 封锁已砍）；首次 Toolify 基线已建，明日起 diff 真新增",
   "daily": [
     {
       "id": "d-post",
       "title": "发文章 / 发视频",
       "note": "每天必发 · 时间浮动",
+      "status": "done"
+    },
+    {
+      "id": "d-digest",
+      "title": "看最新动态（AI 工具圈）",
+      "note": "Product Hunt / HN Show / Toolify / SEO.box 每日一抓 · 看板「最新动态」页 · 15 分钟扫完",
       "status": "done"
     },
     {
