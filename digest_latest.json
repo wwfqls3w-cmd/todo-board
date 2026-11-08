@@ -1,48 +1,48 @@
 {
-  "date": "2026-11-08",
-  "fetched_at": "2026-11-08T04:46:10+08:00",
+  "date": "2026-11-09",
+  "fetched_at": "2026-11-09T04:46:16+08:00",
   "limit_per_site": 6,
   "sources": {
     "producthunt": [
       {
         "source": "producthunt",
-        "title": "Fleeep",
-        "url": "https://www.producthunt.com/products/fleeep",
+        "title": "Textly",
+        "url": "https://www.producthunt.com/products/textly-capture-copy-paste",
         "desc": "",
         "published": ""
       },
       {
         "source": "producthunt",
-        "title": "Switchy",
-        "url": "https://www.producthunt.com/products/switchy",
+        "title": "Agent Clan",
+        "url": "https://www.producthunt.com/products/agent-clan",
         "desc": "",
         "published": ""
       },
       {
         "source": "producthunt",
-        "title": "Trace by Context.dev",
-        "url": "https://www.producthunt.com/products/context-dev",
+        "title": "NoMac",
+        "url": "https://www.producthunt.com/products/nomac",
         "desc": "",
         "published": ""
       },
       {
         "source": "producthunt",
-        "title": "Rex (Beta)",
-        "url": "https://www.producthunt.com/products/superlogical",
+        "title": "AXL",
+        "url": "https://www.producthunt.com/products/axl-2",
         "desc": "",
         "published": ""
       },
       {
         "source": "producthunt",
-        "title": "Sendoff",
-        "url": "https://www.producthunt.com/products/sendoff-2",
+        "title": "Zigzag Browser",
+        "url": "https://www.producthunt.com/products/zigzag-browser",
         "desc": "",
         "published": ""
       },
       {
         "source": "producthunt",
-        "title": "kayet",
-        "url": "https://www.producthunt.com/products/kayet",
+        "title": "Deduplication",
+        "url": "https://www.producthunt.com/products/hacker-noon",
         "desc": "",
         "published": ""
       }
@@ -50,57 +50,57 @@
     "hn_show": [
       {
         "source": "hn_show",
+        "title": "Show HN: Vegetable Gardening for Engineers",
+        "url": "https://news.ycombinator.com/item?id=50362963",
+        "score": 95,
+        "comments": 19,
+        "published": "2026-11-04",
+        "by": "jrcplus"
+      },
+      {
+        "source": "hn_show",
+        "title": "Show HN: Bulk-harden all your GitHub repos' settings without an API token",
+        "url": "https://news.ycombinator.com/item?id=50416829",
+        "score": 2,
+        "comments": 0,
+        "published": "2026-11-08",
+        "by": "1ch4k"
+      },
+      {
+        "source": "hn_show",
+        "title": "Show HN: Nexjoin – A C++ remote desktop alternative (Windows XP+, macOS 10.13)",
+        "url": "https://news.ycombinator.com/item?id=50415946",
+        "score": 2,
+        "comments": 1,
+        "published": "2026-11-08",
+        "by": "szigand"
+      },
+      {
+        "source": "hn_show",
         "title": "Show HN: Coldframe, a honeypot that poses as a supermarket fridge controller",
         "url": "https://news.ycombinator.com/item?id=50406292",
-        "score": 122,
-        "comments": 30,
+        "score": 271,
+        "comments": 62,
         "published": "2026-11-07",
         "by": "hedgerow-dev"
       },
       {
         "source": "hn_show",
-        "title": "Show HN: We compressed a 31B video+audio diffusion model to 14B, 6 steps, INT8",
-        "url": "https://news.ycombinator.com/item?id=50405263",
-        "score": 38,
-        "comments": 11,
-        "published": "2026-11-07",
-        "by": "jiant"
-      },
-      {
-        "source": "hn_show",
-        "title": "Show HN: Spindle – a full-featured, type-safe web framework for OCaml 5",
-        "url": "https://news.ycombinator.com/item?id=50377613",
-        "score": 51,
-        "comments": 8,
-        "published": "2026-11-05",
-        "by": "zaiev"
-      },
-      {
-        "source": "hn_show",
-        "title": "Show HN: Live songbook for guitarists",
-        "url": "https://news.ycombinator.com/item?id=50406749",
-        "score": 3,
-        "comments": 0,
-        "published": "2026-11-07",
-        "by": "gosen"
-      },
-      {
-        "source": "hn_show",
-        "title": "Show HN: Laplace's Scissors – A tool for directly editing LLM weights",
-        "url": "https://news.ycombinator.com/item?id=50406735",
-        "score": 2,
-        "comments": 0,
-        "published": "2026-11-07",
-        "by": "032renya"
-      },
-      {
-        "source": "hn_show",
-        "title": "Show HN: We made a new theme to increase engagement on our website",
-        "url": "https://news.ycombinator.com/item?id=50406700",
+        "title": "Show HN: Elo Ratings for Tests, ODIs, and T20Is",
+        "url": "https://news.ycombinator.com/item?id=50415725",
         "score": 3,
         "comments": 1,
-        "published": "2026-11-07",
-        "by": "forgotmypw17"
+        "published": "2026-11-08",
+        "by": "neehao"
+      },
+      {
+        "source": "hn_show",
+        "title": "Show HN: Notekpr – An open-source, E2EE alternative to Notion and Obsidian",
+        "url": "https://news.ycombinator.com/item?id=50415581",
+        "score": 2,
+        "comments": 1,
+        "published": "2026-11-08",
+        "by": "coolapso"
       }
     ],
     "seobox": {
