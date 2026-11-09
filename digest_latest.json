@@ -1,48 +1,48 @@
 {
-  "date": "2026-11-09",
-  "fetched_at": "2026-11-09T04:46:16+08:00",
+  "date": "2026-11-10",
+  "fetched_at": "2026-11-10T04:46:17+08:00",
   "limit_per_site": 6,
   "sources": {
     "producthunt": [
       {
         "source": "producthunt",
-        "title": "Textly",
-        "url": "https://www.producthunt.com/products/textly-capture-copy-paste",
+        "title": "Sign Language by Panda Video",
+        "url": "https://www.producthunt.com/products/panda-video",
         "desc": "",
         "published": ""
       },
       {
         "source": "producthunt",
-        "title": "Agent Clan",
-        "url": "https://www.producthunt.com/products/agent-clan",
+        "title": "MCP1",
+        "url": "https://www.producthunt.com/products/appwrite",
         "desc": "",
         "published": ""
       },
       {
         "source": "producthunt",
-        "title": "NoMac",
-        "url": "https://www.producthunt.com/products/nomac",
+        "title": "Terse - Durable Actors",
+        "url": "https://www.producthunt.com/products/terse-durable-actors",
         "desc": "",
         "published": ""
       },
       {
         "source": "producthunt",
-        "title": "AXL",
-        "url": "https://www.producthunt.com/products/axl-2",
+        "title": "ProtoMap",
+        "url": "https://www.producthunt.com/products/hounddog-ai-static-code-scanner-2",
         "desc": "",
         "published": ""
       },
       {
         "source": "producthunt",
-        "title": "Zigzag Browser",
-        "url": "https://www.producthunt.com/products/zigzag-browser",
+        "title": "Arcjet AI security models",
+        "url": "https://www.producthunt.com/products/arcjet",
         "desc": "",
         "published": ""
       },
       {
         "source": "producthunt",
-        "title": "Deduplication",
-        "url": "https://www.producthunt.com/products/hacker-noon",
+        "title": "Watchflows",
+        "url": "https://www.producthunt.com/products/watchflows",
         "desc": "",
         "published": ""
       }
@@ -50,57 +50,57 @@
     "hn_show": [
       {
         "source": "hn_show",
-        "title": "Show HN: Vegetable Gardening for Engineers",
-        "url": "https://news.ycombinator.com/item?id=50362963",
-        "score": 95,
-        "comments": 19,
-        "published": "2026-11-04",
-        "by": "jrcplus"
+        "title": "Show HN: MeowDisplay Is iPhone Mirroring, but in Reverse",
+        "url": "https://news.ycombinator.com/item?id=50429636",
+        "score": 43,
+        "comments": 15,
+        "published": "2026-11-09",
+        "by": "raiseCatError"
       },
       {
         "source": "hn_show",
-        "title": "Show HN: Bulk-harden all your GitHub repos' settings without an API token",
-        "url": "https://news.ycombinator.com/item?id=50416829",
-        "score": 2,
-        "comments": 0,
-        "published": "2026-11-08",
-        "by": "1ch4k"
+        "title": "Show HN: Every satellite that passed over any place this week, and its photos",
+        "url": "https://news.ycombinator.com/item?id=50428907",
+        "score": 91,
+        "comments": 20,
+        "published": "2026-11-09",
+        "by": "a585gupt"
       },
       {
         "source": "hn_show",
-        "title": "Show HN: Nexjoin – A C++ remote desktop alternative (Windows XP+, macOS 10.13)",
-        "url": "https://news.ycombinator.com/item?id=50415946",
-        "score": 2,
+        "title": "Show HN: DBDelve – Open-Source DB Client Made with Rust and GPUI",
+        "url": "https://news.ycombinator.com/item?id=50427934",
+        "score": 67,
+        "comments": 22,
+        "published": "2026-11-09",
+        "by": "shayan_abbas"
+      },
+      {
+        "source": "hn_show",
+        "title": "Show HN: Recalc – Spreadsheet where cells can be Claude Code or Codex terminals",
+        "url": "https://news.ycombinator.com/item?id=50413970",
+        "score": 13,
         "comments": 1,
         "published": "2026-11-08",
-        "by": "szigand"
+        "by": "sshah03"
       },
       {
         "source": "hn_show",
-        "title": "Show HN: Coldframe, a honeypot that poses as a supermarket fridge controller",
-        "url": "https://news.ycombinator.com/item?id=50406292",
-        "score": 271,
-        "comments": 62,
-        "published": "2026-11-07",
-        "by": "hedgerow-dev"
+        "title": "Show HN: My daily word puzzle Jointter revisited",
+        "url": "https://news.ycombinator.com/item?id=50426593",
+        "score": 5,
+        "comments": 2,
+        "published": "2026-11-09",
+        "by": "proy87"
       },
       {
         "source": "hn_show",
-        "title": "Show HN: Elo Ratings for Tests, ODIs, and T20Is",
-        "url": "https://news.ycombinator.com/item?id=50415725",
-        "score": 3,
-        "comments": 1,
-        "published": "2026-11-08",
-        "by": "neehao"
-      },
-      {
-        "source": "hn_show",
-        "title": "Show HN: Notekpr – An open-source, E2EE alternative to Notion and Obsidian",
-        "url": "https://news.ycombinator.com/item?id=50415581",
-        "score": 2,
-        "comments": 1,
-        "published": "2026-11-08",
-        "by": "coolapso"
+        "title": "Show HN: Someone Was Here – Find out who used your Mac while you were away",
+        "url": "https://news.ycombinator.com/item?id=50429812",
+        "score": 9,
+        "comments": 6,
+        "published": "2026-11-09",
+        "by": "4onthefloor124"
       }
     ],
     "seobox": {
