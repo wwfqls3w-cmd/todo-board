@@ -1,48 +1,48 @@
 {
-  "date": "2026-11-10",
-  "fetched_at": "2026-11-10T04:46:17+08:00",
+  "date": "2026-11-11",
+  "fetched_at": "2026-11-11T04:46:10+08:00",
   "limit_per_site": 6,
   "sources": {
     "producthunt": [
       {
         "source": "producthunt",
-        "title": "Sign Language by Panda Video",
-        "url": "https://www.producthunt.com/products/panda-video",
+        "title": "OpenVibe",
+        "url": "https://www.producthunt.com/products/openvibe-2",
         "desc": "",
         "published": ""
       },
       {
         "source": "producthunt",
-        "title": "MCP1",
-        "url": "https://www.producthunt.com/products/appwrite",
+        "title": "Dover Startup Jobs",
+        "url": "https://www.producthunt.com/products/dover",
         "desc": "",
         "published": ""
       },
       {
         "source": "producthunt",
-        "title": "Terse - Durable Actors",
-        "url": "https://www.producthunt.com/products/terse-durable-actors",
+        "title": "CollaboTokyo",
+        "url": "https://www.producthunt.com/products/collabotokyo",
         "desc": "",
         "published": ""
       },
       {
         "source": "producthunt",
-        "title": "ProtoMap",
-        "url": "https://www.producthunt.com/products/hounddog-ai-static-code-scanner-2",
+        "title": "ChromePing",
+        "url": "https://www.producthunt.com/products/chromeping",
         "desc": "",
         "published": ""
       },
       {
         "source": "producthunt",
-        "title": "Arcjet AI security models",
-        "url": "https://www.producthunt.com/products/arcjet",
+        "title": "MoreFrame",
+        "url": "https://www.producthunt.com/products/moreframe",
         "desc": "",
         "published": ""
       },
       {
         "source": "producthunt",
-        "title": "Watchflows",
-        "url": "https://www.producthunt.com/products/watchflows",
+        "title": "Rodeo",
+        "url": "https://www.producthunt.com/products/rodeo-7",
         "desc": "",
         "published": ""
       }
@@ -50,57 +50,57 @@
     "hn_show": [
       {
         "source": "hn_show",
-        "title": "Show HN: MeowDisplay Is iPhone Mirroring, but in Reverse",
-        "url": "https://news.ycombinator.com/item?id=50429636",
-        "score": 43,
-        "comments": 15,
-        "published": "2026-11-09",
-        "by": "raiseCatError"
+        "title": "Show HN: Get your coding agent off ~2019 JavaScript, onto modern web primitives",
+        "url": "https://news.ycombinator.com/item?id=50443812",
+        "score": 132,
+        "comments": 37,
+        "published": "2026-11-10",
+        "by": "paulirish"
       },
       {
         "source": "hn_show",
-        "title": "Show HN: Every satellite that passed over any place this week, and its photos",
-        "url": "https://news.ycombinator.com/item?id=50428907",
-        "score": 91,
-        "comments": 20,
-        "published": "2026-11-09",
-        "by": "a585gupt"
+        "title": "Show HN: Valencia, Spain in Sim City/Isometric View",
+        "url": "https://news.ycombinator.com/item?id=50441518",
+        "score": 125,
+        "comments": 33,
+        "published": "2026-11-10",
+        "by": "leugim"
       },
       {
         "source": "hn_show",
-        "title": "Show HN: DBDelve – Open-Source DB Client Made with Rust and GPUI",
-        "url": "https://news.ycombinator.com/item?id=50427934",
-        "score": 67,
-        "comments": 22,
-        "published": "2026-11-09",
-        "by": "shayan_abbas"
-      },
-      {
-        "source": "hn_show",
-        "title": "Show HN: Recalc – Spreadsheet where cells can be Claude Code or Codex terminals",
-        "url": "https://news.ycombinator.com/item?id=50413970",
-        "score": 13,
-        "comments": 1,
+        "title": "Show HN: Ghanaian street games you can play in the browser",
+        "url": "https://news.ycombinator.com/item?id=50414117",
+        "score": 98,
+        "comments": 19,
         "published": "2026-11-08",
-        "by": "sshah03"
+        "by": "samuelaidoo45"
       },
       {
         "source": "hn_show",
-        "title": "Show HN: My daily word puzzle Jointter revisited",
-        "url": "https://news.ycombinator.com/item?id=50426593",
-        "score": 5,
-        "comments": 2,
-        "published": "2026-11-09",
-        "by": "proy87"
+        "title": "Show HN: WolveKafka – Consume Kafka with a plain HTTP endpoint",
+        "url": "https://news.ycombinator.com/item?id=50443596",
+        "score": 7,
+        "comments": 0,
+        "published": "2026-11-10",
+        "by": "piscesdk"
       },
       {
         "source": "hn_show",
-        "title": "Show HN: Someone Was Here – Find out who used your Mac while you were away",
-        "url": "https://news.ycombinator.com/item?id=50429812",
-        "score": 9,
-        "comments": 6,
-        "published": "2026-11-09",
-        "by": "4onthefloor124"
+        "title": "Show HN: TheoremSmith: Mass-Producing Hard Proof Problems to Train LLMs",
+        "url": "https://news.ycombinator.com/item?id=50444276",
+        "score": 6,
+        "comments": 0,
+        "published": "2026-11-10",
+        "by": "charles6huang"
+      },
+      {
+        "source": "hn_show",
+        "title": "Show HN: I have trained 15 blood glucose forecasting models on my own data",
+        "url": "https://news.ycombinator.com/item?id=50444761",
+        "score": 4,
+        "comments": 1,
+        "published": "2026-11-10",
+        "by": "0xdeadf1sh"
       }
     ],
     "seobox": {
