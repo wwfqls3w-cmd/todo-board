@@ -1,48 +1,48 @@
 {
-  "date": "2026-11-11",
-  "fetched_at": "2026-11-11T04:46:10+08:00",
+  "date": "2026-11-12",
+  "fetched_at": "2026-11-12T04:47:17+08:00",
   "limit_per_site": 6,
   "sources": {
     "producthunt": [
       {
         "source": "producthunt",
-        "title": "OpenVibe",
-        "url": "https://www.producthunt.com/products/openvibe-2",
+        "title": "Scribe v3 by ElevenLabs",
+        "url": "https://www.producthunt.com/products/elevenlabs",
         "desc": "",
         "published": ""
       },
       {
         "source": "producthunt",
-        "title": "Dover Startup Jobs",
-        "url": "https://www.producthunt.com/products/dover",
+        "title": "Nod by n8n",
+        "url": "https://www.producthunt.com/products/n8n-io",
         "desc": "",
         "published": ""
       },
       {
         "source": "producthunt",
-        "title": "CollaboTokyo",
-        "url": "https://www.producthunt.com/products/collabotokyo",
+        "title": "RigSpark",
+        "url": "https://www.producthunt.com/products/rigspark",
         "desc": "",
         "published": ""
       },
       {
         "source": "producthunt",
-        "title": "ChromePing",
-        "url": "https://www.producthunt.com/products/chromeping",
+        "title": "CALL-E",
+        "url": "https://www.producthunt.com/products/call-e",
         "desc": "",
         "published": ""
       },
       {
         "source": "producthunt",
-        "title": "MoreFrame",
-        "url": "https://www.producthunt.com/products/moreframe",
+        "title": "Relay",
+        "url": "https://www.producthunt.com/products/relaytoai",
         "desc": "",
         "published": ""
       },
       {
         "source": "producthunt",
-        "title": "Rodeo",
-        "url": "https://www.producthunt.com/products/rodeo-7",
+        "title": "StableBar",
+        "url": "https://www.producthunt.com/products/stablebar",
         "desc": "",
         "published": ""
       }
@@ -50,57 +50,57 @@
     "hn_show": [
       {
         "source": "hn_show",
-        "title": "Show HN: Get your coding agent off ~2019 JavaScript, onto modern web primitives",
-        "url": "https://news.ycombinator.com/item?id=50443812",
-        "score": 132,
-        "comments": 37,
-        "published": "2026-11-10",
-        "by": "paulirish"
+        "title": "Show HN: I recreated Papers Please but you're deciding which YC startups to fund",
+        "url": "https://news.ycombinator.com/item?id=50457230",
+        "score": 81,
+        "comments": 43,
+        "published": "2026-11-11",
+        "by": "bolau"
       },
       {
         "source": "hn_show",
-        "title": "Show HN: Valencia, Spain in Sim City/Isometric View",
-        "url": "https://news.ycombinator.com/item?id=50441518",
-        "score": 125,
-        "comments": 33,
-        "published": "2026-11-10",
-        "by": "leugim"
+        "title": "Show HN: Yogurt – Free, private, open-source alternative to Granola",
+        "url": "https://news.ycombinator.com/item?id=50454625",
+        "score": 109,
+        "comments": 55,
+        "published": "2026-11-11",
+        "by": "brownrout"
       },
       {
         "source": "hn_show",
-        "title": "Show HN: Ghanaian street games you can play in the browser",
-        "url": "https://news.ycombinator.com/item?id=50414117",
-        "score": 98,
-        "comments": 19,
-        "published": "2026-11-08",
-        "by": "samuelaidoo45"
-      },
-      {
-        "source": "hn_show",
-        "title": "Show HN: WolveKafka – Consume Kafka with a plain HTTP endpoint",
-        "url": "https://news.ycombinator.com/item?id=50443596",
-        "score": 7,
-        "comments": 0,
-        "published": "2026-11-10",
-        "by": "piscesdk"
-      },
-      {
-        "source": "hn_show",
-        "title": "Show HN: TheoremSmith: Mass-Producing Hard Proof Problems to Train LLMs",
-        "url": "https://news.ycombinator.com/item?id=50444276",
-        "score": 6,
-        "comments": 0,
-        "published": "2026-11-10",
-        "by": "charles6huang"
-      },
-      {
-        "source": "hn_show",
-        "title": "Show HN: I have trained 15 blood glucose forecasting models on my own data",
-        "url": "https://news.ycombinator.com/item?id=50444761",
-        "score": 4,
-        "comments": 1,
-        "published": "2026-11-10",
+        "title": "Show HN: Godbolt-in-a-floating-window for Neovim (C, C++, Rust)",
+        "url": "https://news.ycombinator.com/item?id=50453229",
+        "score": 89,
+        "comments": 16,
+        "published": "2026-11-11",
         "by": "0xdeadf1sh"
+      },
+      {
+        "source": "hn_show",
+        "title": "Show HN: Micron – Oberon with the Power of C",
+        "url": "https://news.ycombinator.com/item?id=50413266",
+        "score": 37,
+        "comments": 10,
+        "published": "2026-11-08",
+        "by": "Rochus"
+      },
+      {
+        "source": "hn_show",
+        "title": "Show HN: Klad, a paint app your coding agent can drive (source-available)",
+        "url": "https://news.ycombinator.com/item?id=50454951",
+        "score": 62,
+        "comments": 26,
+        "published": "2026-11-11",
+        "by": "ambewas"
+      },
+      {
+        "source": "hn_show",
+        "title": "Show HN: ChessKeep – browse grandmaster chess games",
+        "url": "https://news.ycombinator.com/item?id=50458016",
+        "score": 2,
+        "comments": 0,
+        "published": "2026-11-11",
+        "by": "fisher-brett"
       }
     ],
     "seobox": {
@@ -110,6 +110,11 @@
       "hash": "129dafee1538",
       "desc": "静态 SEO 工具目录（非日更）：内容哈希变化即视为有更新"
     },
-    "toolify": []
+    "toolify": [
+      {
+        "source": "toolify",
+        "error": "toolify 分片 https://www.toolify.ai/sitemap_tools_1.xml 下载失败: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)>"
+      }
+    ]
   }
 }
