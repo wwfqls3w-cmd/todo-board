@@ -1,48 +1,48 @@
 {
-  "date": "2026-11-13",
-  "fetched_at": "2026-11-13T04:45:49+08:00",
+  "date": "2026-11-15",
+  "fetched_at": "2026-11-15T04:46:29+08:00",
   "limit_per_site": 6,
   "sources": {
     "producthunt": [
       {
         "source": "producthunt",
-        "title": "Spacefast by Automattic",
-        "url": "https://www.producthunt.com/products/spacefast-by-automattic",
+        "title": "Blender 5.3",
+        "url": "https://www.producthunt.com/products/blender",
         "desc": "",
         "published": ""
       },
       {
         "source": "producthunt",
-        "title": "Insight7 Voice AI Agents",
-        "url": "https://www.producthunt.com/products/insight7",
+        "title": "HiringNow",
+        "url": "https://www.producthunt.com/products/hiringnow",
         "desc": "",
         "published": ""
       },
       {
         "source": "producthunt",
-        "title": "Cloudways Velocity",
-        "url": "https://www.producthunt.com/products/cloudways",
+        "title": "Dex Semantics",
+        "url": "https://www.producthunt.com/products/dex-by-exmergo",
         "desc": "",
         "published": ""
       },
       {
         "source": "producthunt",
-        "title": "Hoy for Mac",
-        "url": "https://www.producthunt.com/products/hoy-for-mac",
+        "title": "Gemini Robotics 2.5",
+        "url": "https://www.producthunt.com/products/gemini-robotics-2-5",
         "desc": "",
         "published": ""
       },
       {
         "source": "producthunt",
-        "title": "Jot 2.0",
-        "url": "https://www.producthunt.com/products/jot-2-0",
+        "title": "Businesses in ChatGPT",
+        "url": "https://www.producthunt.com/products/openai",
         "desc": "",
         "published": ""
       },
       {
         "source": "producthunt",
-        "title": "Skysoon",
-        "url": "https://www.producthunt.com/products/skysoon",
+        "title": "Kokonut UI",
+        "url": "https://www.producthunt.com/products/kokonutui",
         "desc": "",
         "published": ""
       }
@@ -50,57 +50,57 @@
     "hn_show": [
       {
         "source": "hn_show",
-        "title": "Show HN: My $300 embroidery machine needed a subscription, so I built my own app",
-        "url": "https://news.ycombinator.com/item?id=50470488",
-        "score": 134,
-        "comments": 55,
-        "published": "2026-11-12",
-        "by": "simpsoka"
+        "title": "Show HN: DeepSeek V3 in ~200 lines of pure Jax",
+        "url": "https://news.ycombinator.com/item?id=50497589",
+        "score": 92,
+        "comments": 5,
+        "published": "2026-11-14",
+        "by": "VaibhaavTiwari"
       },
       {
         "source": "hn_show",
-        "title": "Show HN: AgentRun – open-source, Self-improving Managed Agents",
-        "url": "https://news.ycombinator.com/item?id=50471650",
-        "score": 48,
-        "comments": 3,
-        "published": "2026-11-12",
-        "by": "miguelrios"
+        "title": "Show HN: A terminal-native idle factory game, written in Rust with ratatui",
+        "url": "https://news.ycombinator.com/item?id=50497132",
+        "score": 110,
+        "comments": 24,
+        "published": "2026-11-14",
+        "by": "snipedbywifi"
       },
       {
         "source": "hn_show",
-        "title": "Show HN: Kapso – Iterative learning from enterprise data",
-        "url": "https://news.ycombinator.com/item?id=50471281",
-        "score": 20,
-        "comments": 6,
-        "published": "2026-11-12",
-        "by": "alireza_msh"
+        "title": "Show HN: Fursoy – Out-of-order RV64IMAFDV core in SystemVerilog (Linux 6.6)",
+        "url": "https://news.ycombinator.com/item?id=50497137",
+        "score": 54,
+        "comments": 16,
+        "published": "2026-11-14",
+        "by": "fursoy"
       },
       {
         "source": "hn_show",
-        "title": "Show HN: Apron Chat Protocol",
-        "url": "https://news.ycombinator.com/item?id=50470343",
-        "score": 8,
+        "title": "Show HN: Agweb – a browser for agents that stays out of your way",
+        "url": "https://news.ycombinator.com/item?id=50497147",
+        "score": 67,
+        "comments": 21,
+        "published": "2026-11-14",
+        "by": "paul_nameless"
+      },
+      {
+        "source": "hn_show",
+        "title": "Show HN: I have trained 15 blood glucose forecasting models on my own data",
+        "url": "https://news.ycombinator.com/item?id=50444761",
+        "score": 92,
+        "comments": 50,
+        "published": "2026-11-10",
+        "by": "0xdeadf1sh"
+      },
+      {
+        "source": "hn_show",
+        "title": "Show HN: Shotoku – Local-first action governance and budget caps for AI agents",
+        "url": "https://news.ycombinator.com/item?id=50496705",
+        "score": 6,
         "comments": 0,
-        "published": "2026-11-12",
-        "by": "shazow"
-      },
-      {
-        "source": "hn_show",
-        "title": "Show HN: DRS-VPT. Localize a photo in a 3D point cloud without an initial pose",
-        "url": "https://news.ycombinator.com/item?id=50472560",
-        "score": 3,
-        "comments": 0,
-        "published": "2026-11-12",
-        "by": "seasponge"
-      },
-      {
-        "source": "hn_show",
-        "title": "Show HN: Build a PC in 3D in the Browser",
-        "url": "https://news.ycombinator.com/item?id=50415379",
-        "score": 45,
-        "comments": 17,
-        "published": "2026-11-08",
-        "by": "ozaiworld"
+        "published": "2026-11-14",
+        "by": "IssaPrvj"
       }
     ],
     "seobox": {
