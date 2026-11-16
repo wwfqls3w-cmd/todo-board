@@ -1,48 +1,48 @@
 {
-  "date": "2026-11-15",
-  "fetched_at": "2026-11-15T04:46:29+08:00",
+  "date": "2026-11-17",
+  "fetched_at": "2026-11-17T04:45:51+08:00",
   "limit_per_site": 6,
   "sources": {
     "producthunt": [
       {
         "source": "producthunt",
-        "title": "Blender 5.3",
-        "url": "https://www.producthunt.com/products/blender",
+        "title": "readywhen",
+        "url": "https://www.producthunt.com/products/readywhen",
         "desc": "",
         "published": ""
       },
       {
         "source": "producthunt",
-        "title": "HiringNow",
-        "url": "https://www.producthunt.com/products/hiringnow",
+        "title": "Cal.com v7",
+        "url": "https://www.producthunt.com/products/cal",
         "desc": "",
         "published": ""
       },
       {
         "source": "producthunt",
-        "title": "Dex Semantics",
-        "url": "https://www.producthunt.com/products/dex-by-exmergo",
+        "title": "Punchcutter",
+        "url": "https://www.producthunt.com/products/punchcutter",
         "desc": "",
         "published": ""
       },
       {
         "source": "producthunt",
-        "title": "Gemini Robotics 2.5",
-        "url": "https://www.producthunt.com/products/gemini-robotics-2-5",
+        "title": "Docsy",
+        "url": "https://www.producthunt.com/products/docsy-4",
         "desc": "",
         "published": ""
       },
       {
         "source": "producthunt",
-        "title": "Businesses in ChatGPT",
-        "url": "https://www.producthunt.com/products/openai",
+        "title": "Curates",
+        "url": "https://www.producthunt.com/products/curates",
         "desc": "",
         "published": ""
       },
       {
         "source": "producthunt",
-        "title": "Kokonut UI",
-        "url": "https://www.producthunt.com/products/kokonutui",
+        "title": "Fluid",
+        "url": "https://www.producthunt.com/products/kugelaudio",
         "desc": "",
         "published": ""
       }
@@ -50,57 +50,57 @@
     "hn_show": [
       {
         "source": "hn_show",
-        "title": "Show HN: DeepSeek V3 in ~200 lines of pure Jax",
-        "url": "https://news.ycombinator.com/item?id=50497589",
-        "score": 92,
-        "comments": 5,
-        "published": "2026-11-14",
-        "by": "VaibhaavTiwari"
-      },
-      {
-        "source": "hn_show",
-        "title": "Show HN: A terminal-native idle factory game, written in Rust with ratatui",
-        "url": "https://news.ycombinator.com/item?id=50497132",
-        "score": 110,
-        "comments": 24,
-        "published": "2026-11-14",
-        "by": "snipedbywifi"
-      },
-      {
-        "source": "hn_show",
-        "title": "Show HN: Fursoy – Out-of-order RV64IMAFDV core in SystemVerilog (Linux 6.6)",
-        "url": "https://news.ycombinator.com/item?id=50497137",
-        "score": 54,
-        "comments": 16,
-        "published": "2026-11-14",
-        "by": "fursoy"
-      },
-      {
-        "source": "hn_show",
-        "title": "Show HN: Agweb – a browser for agents that stays out of your way",
-        "url": "https://news.ycombinator.com/item?id=50497147",
-        "score": 67,
-        "comments": 21,
-        "published": "2026-11-14",
-        "by": "paul_nameless"
-      },
-      {
-        "source": "hn_show",
-        "title": "Show HN: I have trained 15 blood glucose forecasting models on my own data",
-        "url": "https://news.ycombinator.com/item?id=50444761",
-        "score": 92,
-        "comments": 50,
-        "published": "2026-11-10",
-        "by": "0xdeadf1sh"
-      },
-      {
-        "source": "hn_show",
-        "title": "Show HN: Shotoku – Local-first action governance and budget caps for AI agents",
-        "url": "https://news.ycombinator.com/item?id=50496705",
-        "score": 6,
+        "title": "Show HN: CutCraft – an MIT library for making and editing videos in TSX",
+        "url": "https://news.ycombinator.com/item?id=50521717",
+        "score": 3,
         "comments": 0,
-        "published": "2026-11-14",
-        "by": "IssaPrvj"
+        "published": "2026-11-16",
+        "by": "bsnisar"
+      },
+      {
+        "source": "hn_show",
+        "title": "Show HN: XDM – a FOSS IDM alternative since 2013 revamped and torrent support",
+        "url": "https://news.ycombinator.com/item?id=50521479",
+        "score": 2,
+        "comments": 0,
+        "published": "2026-11-16",
+        "by": "subhra74"
+      },
+      {
+        "source": "hn_show",
+        "title": "Show HN: Birds as Code",
+        "url": "https://news.ycombinator.com/item?id=50521287",
+        "score": 4,
+        "comments": 3,
+        "published": "2026-11-16",
+        "by": "abdljasser2"
+      },
+      {
+        "source": "hn_show",
+        "title": "Show HN: Cppgm compiles C++ to WASM 4x faster than Clang",
+        "url": "https://news.ycombinator.com/item?id=50521074",
+        "score": 4,
+        "comments": 0,
+        "published": "2026-11-16",
+        "by": "vishvananda"
+      },
+      {
+        "source": "hn_show",
+        "title": "Show HN: Treestamp – An editor for project directory trees",
+        "url": "https://news.ycombinator.com/item?id=50520760",
+        "score": 3,
+        "comments": 0,
+        "published": "2026-11-16",
+        "by": "kumarbittu"
+      },
+      {
+        "source": "hn_show",
+        "title": "Show HN: A booking page that handles payment and sends a Zoom/Meet/Discord link",
+        "url": "https://news.ycombinator.com/item?id=50520744",
+        "score": 3,
+        "comments": 1,
+        "published": "2026-11-16",
+        "by": "poteresting"
       }
     ],
     "seobox": {
