@@ -1,48 +1,48 @@
 {
-  "date": "2026-11-17",
-  "fetched_at": "2026-11-17T04:45:51+08:00",
+  "date": "2026-11-18",
+  "fetched_at": "2026-11-18T13:39:14+08:00",
   "limit_per_site": 6,
   "sources": {
     "producthunt": [
       {
         "source": "producthunt",
-        "title": "readywhen",
-        "url": "https://www.producthunt.com/products/readywhen",
+        "title": "TheBold",
+        "url": "https://www.producthunt.com/products/thebold",
         "desc": "",
         "published": ""
       },
       {
         "source": "producthunt",
-        "title": "Cal.com v7",
-        "url": "https://www.producthunt.com/products/cal",
+        "title": "ROOTKey Platform",
+        "url": "https://www.producthunt.com/products/rootkey-platform",
         "desc": "",
         "published": ""
       },
       {
         "source": "producthunt",
-        "title": "Punchcutter",
-        "url": "https://www.producthunt.com/products/punchcutter",
+        "title": "WispOS",
+        "url": "https://www.producthunt.com/products/wispos",
         "desc": "",
         "published": ""
       },
       {
         "source": "producthunt",
-        "title": "Docsy",
-        "url": "https://www.producthunt.com/products/docsy-4",
+        "title": "OnlineCompiler.io",
+        "url": "https://www.producthunt.com/products/onlinecompiler-io",
         "desc": "",
         "published": ""
       },
       {
         "source": "producthunt",
-        "title": "Curates",
-        "url": "https://www.producthunt.com/products/curates",
+        "title": "ExtraDock 5",
+        "url": "https://www.producthunt.com/products/extradock",
         "desc": "",
         "published": ""
       },
       {
         "source": "producthunt",
-        "title": "Fluid",
-        "url": "https://www.producthunt.com/products/kugelaudio",
+        "title": "Trading Agents",
+        "url": "https://www.producthunt.com/products/alpha-vantage",
         "desc": "",
         "published": ""
       }
@@ -50,57 +50,57 @@
     "hn_show": [
       {
         "source": "hn_show",
-        "title": "Show HN: CutCraft – an MIT library for making and editing videos in TSX",
-        "url": "https://news.ycombinator.com/item?id=50521717",
-        "score": 3,
-        "comments": 0,
-        "published": "2026-11-16",
-        "by": "bsnisar"
+        "title": "Show HN: Alloy CSS, dialogs, menus and tabs that work with JavaScript off",
+        "url": "https://news.ycombinator.com/item?id=50532385",
+        "score": 189,
+        "comments": 33,
+        "published": "2026-11-17",
+        "by": "prafandy"
       },
       {
         "source": "hn_show",
-        "title": "Show HN: XDM – a FOSS IDM alternative since 2013 revamped and torrent support",
-        "url": "https://news.ycombinator.com/item?id=50521479",
+        "title": "Show HN: TrnRT – An open-source LLM inference engine for AWS Trainium",
+        "url": "https://news.ycombinator.com/item?id=50533270",
+        "score": 47,
+        "comments": 7,
+        "published": "2026-11-17",
+        "by": "sanchitmonga22"
+      },
+      {
+        "source": "hn_show",
+        "title": "Show HN: Recycle old hw HP Laserjet 1005 driver for Windows 11 x64 with Codex",
+        "url": "https://news.ycombinator.com/item?id=50541736",
         "score": 2,
         "comments": 0,
-        "published": "2026-11-16",
-        "by": "subhra74"
+        "published": "2026-11-18",
+        "by": "hernandipietro"
       },
       {
         "source": "hn_show",
-        "title": "Show HN: Birds as Code",
-        "url": "https://news.ycombinator.com/item?id=50521287",
-        "score": 4,
-        "comments": 3,
-        "published": "2026-11-16",
-        "by": "abdljasser2"
-      },
-      {
-        "source": "hn_show",
-        "title": "Show HN: Cppgm compiles C++ to WASM 4x faster than Clang",
-        "url": "https://news.ycombinator.com/item?id=50521074",
-        "score": 4,
-        "comments": 0,
-        "published": "2026-11-16",
-        "by": "vishvananda"
-      },
-      {
-        "source": "hn_show",
-        "title": "Show HN: Treestamp – An editor for project directory trees",
-        "url": "https://news.ycombinator.com/item?id=50520760",
-        "score": 3,
-        "comments": 0,
-        "published": "2026-11-16",
-        "by": "kumarbittu"
-      },
-      {
-        "source": "hn_show",
-        "title": "Show HN: A booking page that handles payment and sends a Zoom/Meet/Discord link",
-        "url": "https://news.ycombinator.com/item?id=50520744",
+        "title": "Show HN: Tinnitus frequency finder and audio notch tool",
+        "url": "https://news.ycombinator.com/item?id=50541568",
         "score": 3,
         "comments": 1,
-        "published": "2026-11-16",
-        "by": "poteresting"
+        "published": "2026-11-18",
+        "by": "brianrhea"
+      },
+      {
+        "source": "hn_show",
+        "title": "Show HN: Director's Lookbook, named looks for image, video and music prompts",
+        "url": "https://news.ycombinator.com/item?id=50541419",
+        "score": 3,
+        "comments": 0,
+        "published": "2026-11-18",
+        "by": "RiverRoadLabs"
+      },
+      {
+        "source": "hn_show",
+        "title": "Show HN: Zigzag, a native Mac browser for people leaving Arc",
+        "url": "https://news.ycombinator.com/item?id=50496787",
+        "score": 115,
+        "comments": 70,
+        "published": "2026-11-14",
+        "by": "ZigaoWang"
       }
     ],
     "seobox": {
