@@ -1,48 +1,48 @@
 {
-  "date": "2026-11-18",
-  "fetched_at": "2026-11-18T13:39:14+08:00",
+  "date": "2026-11-19",
+  "fetched_at": "2026-11-19T04:45:34+08:00",
   "limit_per_site": 6,
   "sources": {
     "producthunt": [
       {
         "source": "producthunt",
-        "title": "TheBold",
-        "url": "https://www.producthunt.com/products/thebold",
+        "title": "S.Space",
+        "url": "https://www.producthunt.com/products/s-space",
         "desc": "",
         "published": ""
       },
       {
         "source": "producthunt",
-        "title": "ROOTKey Platform",
-        "url": "https://www.producthunt.com/products/rootkey-platform",
+        "title": "Bluedot Phone Calls",
+        "url": "https://www.producthunt.com/products/bluedot-2",
         "desc": "",
         "published": ""
       },
       {
         "source": "producthunt",
-        "title": "WispOS",
-        "url": "https://www.producthunt.com/products/wispos",
+        "title": "Toone",
+        "url": "https://www.producthunt.com/products/toone",
         "desc": "",
         "published": ""
       },
       {
         "source": "producthunt",
-        "title": "OnlineCompiler.io",
-        "url": "https://www.producthunt.com/products/onlinecompiler-io",
+        "title": "Qwen4-Max",
+        "url": "https://www.producthunt.com/products/qwen3",
         "desc": "",
         "published": ""
       },
       {
         "source": "producthunt",
-        "title": "ExtraDock 5",
-        "url": "https://www.producthunt.com/products/extradock",
+        "title": "Ody Ai Business Phone",
+        "url": "https://www.producthunt.com/products/ody-ai-business-phone",
         "desc": "",
         "published": ""
       },
       {
         "source": "producthunt",
-        "title": "Trading Agents",
-        "url": "https://www.producthunt.com/products/alpha-vantage",
+        "title": "Happo animation testing",
+        "url": "https://www.producthunt.com/products/happo-2",
         "desc": "",
         "published": ""
       }
@@ -50,57 +50,57 @@
     "hn_show": [
       {
         "source": "hn_show",
-        "title": "Show HN: Alloy CSS, dialogs, menus and tabs that work with JavaScript off",
-        "url": "https://news.ycombinator.com/item?id=50532385",
-        "score": 189,
-        "comments": 33,
-        "published": "2026-11-17",
-        "by": "prafandy"
-      },
-      {
-        "source": "hn_show",
-        "title": "Show HN: TrnRT – An open-source LLM inference engine for AWS Trainium",
-        "url": "https://news.ycombinator.com/item?id=50533270",
-        "score": 47,
-        "comments": 7,
-        "published": "2026-11-17",
-        "by": "sanchitmonga22"
-      },
-      {
-        "source": "hn_show",
-        "title": "Show HN: Recycle old hw HP Laserjet 1005 driver for Windows 11 x64 with Codex",
-        "url": "https://news.ycombinator.com/item?id=50541736",
-        "score": 2,
-        "comments": 0,
+        "title": "Show HN: ExitPath – Open-source ways out of Slack, Notion and Microsoft 365",
+        "url": "https://news.ycombinator.com/item?id=50547980",
+        "score": 99,
+        "comments": 16,
         "published": "2026-11-18",
-        "by": "hernandipietro"
+        "by": "zerocool0101"
       },
       {
         "source": "hn_show",
-        "title": "Show HN: Tinnitus frequency finder and audio notch tool",
-        "url": "https://news.ycombinator.com/item?id=50541568",
+        "title": "Show HN: Mastra Factory, the open-source software factory we use to build Mastra",
+        "url": "https://news.ycombinator.com/item?id=50548660",
+        "score": 49,
+        "comments": 15,
+        "published": "2026-11-18",
+        "by": "codekarate"
+      },
+      {
+        "source": "hn_show",
+        "title": "Show HN: Take Voyager 1 apart, down to a single memory chip",
+        "url": "https://news.ycombinator.com/item?id=50548161",
+        "score": 92,
+        "comments": 23,
+        "published": "2026-11-18",
+        "by": "raj-shekhar"
+      },
+      {
+        "source": "hn_show",
+        "title": "Show HN: Nobody blocks a keyboard – Rooted Android as a physical USB Deck",
+        "url": "https://news.ycombinator.com/item?id=50517840",
+        "score": 29,
+        "comments": 32,
+        "published": "2026-11-16",
+        "by": "mr-anjaneyam"
+      },
+      {
+        "source": "hn_show",
+        "title": "Show HN: Type Fighter 2",
+        "url": "https://news.ycombinator.com/item?id=50544821",
+        "score": 109,
+        "comments": 51,
+        "published": "2026-11-18",
+        "by": "torumitch"
+      },
+      {
+        "source": "hn_show",
+        "title": "Show HN: Poptato – App launcher, command runner, and fuzzy menu for Linux",
+        "url": "https://news.ycombinator.com/item?id=50550737",
         "score": 3,
         "comments": 1,
         "published": "2026-11-18",
-        "by": "brianrhea"
-      },
-      {
-        "source": "hn_show",
-        "title": "Show HN: Director's Lookbook, named looks for image, video and music prompts",
-        "url": "https://news.ycombinator.com/item?id=50541419",
-        "score": 3,
-        "comments": 0,
-        "published": "2026-11-18",
-        "by": "RiverRoadLabs"
-      },
-      {
-        "source": "hn_show",
-        "title": "Show HN: Zigzag, a native Mac browser for people leaving Arc",
-        "url": "https://news.ycombinator.com/item?id=50496787",
-        "score": 115,
-        "comments": 70,
-        "published": "2026-11-14",
-        "by": "ZigaoWang"
+        "by": "modinfo"
       }
     ],
     "seobox": {
