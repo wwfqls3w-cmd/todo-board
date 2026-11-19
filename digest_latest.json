@@ -1,48 +1,48 @@
 {
-  "date": "2026-11-19",
-  "fetched_at": "2026-11-19T04:45:34+08:00",
+  "date": "2026-11-20",
+  "fetched_at": "2026-11-20T04:45:35+08:00",
   "limit_per_site": 6,
   "sources": {
     "producthunt": [
       {
         "source": "producthunt",
-        "title": "S.Space",
-        "url": "https://www.producthunt.com/products/s-space",
+        "title": "Spellar for Chrome",
+        "url": "https://www.producthunt.com/products/spellar",
         "desc": "",
         "published": ""
       },
       {
         "source": "producthunt",
-        "title": "Bluedot Phone Calls",
-        "url": "https://www.producthunt.com/products/bluedot-2",
+        "title": "Stripo Email Widgets",
+        "url": "https://www.producthunt.com/products/stripo-email",
         "desc": "",
         "published": ""
       },
       {
         "source": "producthunt",
-        "title": "Toone",
-        "url": "https://www.producthunt.com/products/toone",
+        "title": "Adside",
+        "url": "https://www.producthunt.com/products/adside",
         "desc": "",
         "published": ""
       },
       {
         "source": "producthunt",
-        "title": "Qwen4-Max",
-        "url": "https://www.producthunt.com/products/qwen3",
+        "title": "Teaflask",
+        "url": "https://www.producthunt.com/products/teaflask",
         "desc": "",
         "published": ""
       },
       {
         "source": "producthunt",
-        "title": "Ody Ai Business Phone",
-        "url": "https://www.producthunt.com/products/ody-ai-business-phone",
+        "title": "Fieldwork Code",
+        "url": "https://www.producthunt.com/products/fieldwork-code",
         "desc": "",
         "published": ""
       },
       {
         "source": "producthunt",
-        "title": "Happo animation testing",
-        "url": "https://www.producthunt.com/products/happo-2",
+        "title": "Impractical",
+        "url": "https://www.producthunt.com/products/impractical",
         "desc": "",
         "published": ""
       }
@@ -50,19 +50,46 @@
     "hn_show": [
       {
         "source": "hn_show",
-        "title": "Show HN: ExitPath – Open-source ways out of Slack, Notion and Microsoft 365",
-        "url": "https://news.ycombinator.com/item?id=50547980",
-        "score": 99,
-        "comments": 16,
-        "published": "2026-11-18",
-        "by": "zerocool0101"
+        "title": "Show HN: Cornhole News – A Hacker News inspired site for news across the Midwest",
+        "url": "https://news.ycombinator.com/item?id=50561515",
+        "score": 135,
+        "comments": 63,
+        "published": "2026-11-19",
+        "by": "cornholemedia"
+      },
+      {
+        "source": "hn_show",
+        "title": "Show HN: Neoma P-CAM – Sub-millisecond physical equilibrium and 64-spin Ising",
+        "url": "https://news.ycombinator.com/item?id=50517783",
+        "score": 11,
+        "comments": 0,
+        "published": "2026-11-16",
+        "by": "neoma001"
+      },
+      {
+        "source": "hn_show",
+        "title": "Show HN: Watch weight-space programming in action with WebGPU",
+        "url": "https://news.ycombinator.com/item?id=50561436",
+        "score": 28,
+        "comments": 3,
+        "published": "2026-11-19",
+        "by": "wsxiaoys"
+      },
+      {
+        "source": "hn_show",
+        "title": "Show HN: TIE Fighter co-op in 11 days, built from 11 years of Wing Commander",
+        "url": "https://news.ycombinator.com/item?id=50565475",
+        "score": 2,
+        "comments": 1,
+        "published": "2026-11-19",
+        "by": "daniel_rh"
       },
       {
         "source": "hn_show",
         "title": "Show HN: Mastra Factory, the open-source software factory we use to build Mastra",
         "url": "https://news.ycombinator.com/item?id=50548660",
-        "score": 49,
-        "comments": 15,
+        "score": 135,
+        "comments": 41,
         "published": "2026-11-18",
         "by": "codekarate"
       },
@@ -70,37 +97,10 @@
         "source": "hn_show",
         "title": "Show HN: Take Voyager 1 apart, down to a single memory chip",
         "url": "https://news.ycombinator.com/item?id=50548161",
-        "score": 92,
-        "comments": 23,
+        "score": 234,
+        "comments": 57,
         "published": "2026-11-18",
         "by": "raj-shekhar"
-      },
-      {
-        "source": "hn_show",
-        "title": "Show HN: Nobody blocks a keyboard – Rooted Android as a physical USB Deck",
-        "url": "https://news.ycombinator.com/item?id=50517840",
-        "score": 29,
-        "comments": 32,
-        "published": "2026-11-16",
-        "by": "mr-anjaneyam"
-      },
-      {
-        "source": "hn_show",
-        "title": "Show HN: Type Fighter 2",
-        "url": "https://news.ycombinator.com/item?id=50544821",
-        "score": 109,
-        "comments": 51,
-        "published": "2026-11-18",
-        "by": "torumitch"
-      },
-      {
-        "source": "hn_show",
-        "title": "Show HN: Poptato – App launcher, command runner, and fuzzy menu for Linux",
-        "url": "https://news.ycombinator.com/item?id=50550737",
-        "score": 3,
-        "comments": 1,
-        "published": "2026-11-18",
-        "by": "modinfo"
       }
     ],
     "seobox": {
