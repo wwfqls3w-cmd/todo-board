@@ -1,48 +1,48 @@
 {
-  "date": "2026-11-20",
-  "fetched_at": "2026-11-20T04:45:35+08:00",
+  "date": "2026-11-21",
+  "fetched_at": "2026-11-21T04:45:30+08:00",
   "limit_per_site": 6,
   "sources": {
     "producthunt": [
       {
         "source": "producthunt",
-        "title": "Spellar for Chrome",
-        "url": "https://www.producthunt.com/products/spellar",
+        "title": "tinytldr",
+        "url": "https://www.producthunt.com/products/tinytldr",
         "desc": "",
         "published": ""
       },
       {
         "source": "producthunt",
-        "title": "Stripo Email Widgets",
-        "url": "https://www.producthunt.com/products/stripo-email",
+        "title": "pickfit",
+        "url": "https://www.producthunt.com/products/pickfit",
         "desc": "",
         "published": ""
       },
       {
         "source": "producthunt",
-        "title": "Adside",
-        "url": "https://www.producthunt.com/products/adside",
+        "title": "Zethos",
+        "url": "https://www.producthunt.com/products/zethos",
         "desc": "",
         "published": ""
       },
       {
         "source": "producthunt",
-        "title": "Teaflask",
-        "url": "https://www.producthunt.com/products/teaflask",
+        "title": "Cup of Sugar",
+        "url": "https://www.producthunt.com/products/cup-of-sugar-2",
         "desc": "",
         "published": ""
       },
       {
         "source": "producthunt",
-        "title": "Fieldwork Code",
-        "url": "https://www.producthunt.com/products/fieldwork-code",
+        "title": "DWaste",
+        "url": "https://www.producthunt.com/products/deep-waste",
         "desc": "",
         "published": ""
       },
       {
         "source": "producthunt",
-        "title": "Impractical",
-        "url": "https://www.producthunt.com/products/impractical",
+        "title": "Salus",
+        "url": "https://www.producthunt.com/products/salus",
         "desc": "",
         "published": ""
       }
@@ -50,57 +50,57 @@
     "hn_show": [
       {
         "source": "hn_show",
-        "title": "Show HN: Cornhole News – A Hacker News inspired site for news across the Midwest",
-        "url": "https://news.ycombinator.com/item?id=50561515",
-        "score": 135,
-        "comments": 63,
-        "published": "2026-11-19",
-        "by": "cornholemedia"
+        "title": "Show HN: I made an audio-to-MIDI model 60x more efficient",
+        "url": "https://news.ycombinator.com/item?id=50526023",
+        "score": 195,
+        "comments": 36,
+        "published": "2026-11-17",
+        "by": "hidude562"
       },
       {
         "source": "hn_show",
-        "title": "Show HN: Neoma P-CAM – Sub-millisecond physical equilibrium and 64-spin Ising",
-        "url": "https://news.ycombinator.com/item?id=50517783",
-        "score": 11,
+        "title": "Show HN: OpenComputer – an open source alternative to Devin",
+        "url": "https://news.ycombinator.com/item?id=50581403",
+        "score": 5,
         "comments": 0,
-        "published": "2026-11-16",
-        "by": "neoma001"
+        "published": "2026-11-20",
+        "by": "iacguy"
       },
       {
         "source": "hn_show",
-        "title": "Show HN: Watch weight-space programming in action with WebGPU",
-        "url": "https://news.ycombinator.com/item?id=50561436",
-        "score": 28,
-        "comments": 3,
+        "title": "Show HN: Fast deterministic natural language search for OpenStreetMap data",
+        "url": "https://news.ycombinator.com/item?id=50561199",
+        "score": 114,
+        "comments": 32,
         "published": "2026-11-19",
-        "by": "wsxiaoys"
+        "by": "vihren"
       },
       {
         "source": "hn_show",
-        "title": "Show HN: TIE Fighter co-op in 11 days, built from 11 years of Wing Commander",
-        "url": "https://news.ycombinator.com/item?id=50565475",
+        "title": "Show HN: A browser game about trying to join a meeting",
+        "url": "https://news.ycombinator.com/item?id=50581030",
         "score": 2,
-        "comments": 1,
-        "published": "2026-11-19",
-        "by": "daniel_rh"
+        "comments": 0,
+        "published": "2026-11-20",
+        "by": "macNchz"
       },
       {
         "source": "hn_show",
-        "title": "Show HN: Mastra Factory, the open-source software factory we use to build Mastra",
-        "url": "https://news.ycombinator.com/item?id=50548660",
-        "score": 135,
-        "comments": 41,
-        "published": "2026-11-18",
-        "by": "codekarate"
+        "title": "Show HN: Prefixwise 0.12 – a paper and a spec for why prompt caches miss",
+        "url": "https://news.ycombinator.com/item?id=50581015",
+        "score": 2,
+        "comments": 0,
+        "published": "2026-11-20",
+        "by": "tchavali"
       },
       {
         "source": "hn_show",
-        "title": "Show HN: Take Voyager 1 apart, down to a single memory chip",
-        "url": "https://news.ycombinator.com/item?id=50548161",
-        "score": 234,
-        "comments": 57,
-        "published": "2026-11-18",
-        "by": "raj-shekhar"
+        "title": "Show HN: ArkViz – AI generated software architecture diagrams",
+        "url": "https://news.ycombinator.com/item?id=50580994",
+        "score": 2,
+        "comments": 0,
+        "published": "2026-11-20",
+        "by": "bofia"
       }
     ],
     "seobox": {
