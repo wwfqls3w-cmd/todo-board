@@ -1,48 +1,48 @@
 {
-  "date": "2026-11-21",
-  "fetched_at": "2026-11-21T04:45:30+08:00",
+  "date": "2026-11-22",
+  "fetched_at": "2026-11-22T04:45:29+08:00",
   "limit_per_site": 6,
   "sources": {
     "producthunt": [
       {
         "source": "producthunt",
-        "title": "tinytldr",
-        "url": "https://www.producthunt.com/products/tinytldr",
+        "title": "Doddle",
+        "url": "https://www.producthunt.com/products/doddle-3",
         "desc": "",
         "published": ""
       },
       {
         "source": "producthunt",
-        "title": "pickfit",
-        "url": "https://www.producthunt.com/products/pickfit",
+        "title": "AlterContacts",
+        "url": "https://www.producthunt.com/products/alter-contacts-ai-client-relationships",
         "desc": "",
         "published": ""
       },
       {
         "source": "producthunt",
-        "title": "Zethos",
-        "url": "https://www.producthunt.com/products/zethos",
+        "title": "Beat Watcher",
+        "url": "https://www.producthunt.com/products/beat-watcher",
         "desc": "",
         "published": ""
       },
       {
         "source": "producthunt",
-        "title": "Cup of Sugar",
-        "url": "https://www.producthunt.com/products/cup-of-sugar-2",
+        "title": "Exa Websets V2",
+        "url": "https://www.producthunt.com/products/exa-ai",
         "desc": "",
         "published": ""
       },
       {
         "source": "producthunt",
-        "title": "DWaste",
-        "url": "https://www.producthunt.com/products/deep-waste",
+        "title": "Glassmail",
+        "url": "https://www.producthunt.com/products/glassmail",
         "desc": "",
         "published": ""
       },
       {
         "source": "producthunt",
-        "title": "Salus",
-        "url": "https://www.producthunt.com/products/salus",
+        "title": "Shipyard",
+        "url": "https://www.producthunt.com/products/shipyard",
         "desc": "",
         "published": ""
       }
@@ -50,57 +50,57 @@
     "hn_show": [
       {
         "source": "hn_show",
+        "title": "Show HN: Zero C# – C# without a runtime or GC",
+        "url": "https://news.ycombinator.com/item?id=50590279",
+        "score": 86,
+        "comments": 63,
+        "published": "2026-11-21",
+        "by": "reverseblade2"
+      },
+      {
+        "source": "hn_show",
+        "title": "Show HN: An ASCII cell aquarium for your terminal",
+        "url": "https://news.ycombinator.com/item?id=50541047",
+        "score": 32,
+        "comments": 12,
+        "published": "2026-11-18",
+        "by": "kborer"
+      },
+      {
+        "source": "hn_show",
+        "title": "Show HN: Tinnitus frequency finder and audio notch tool",
+        "url": "https://news.ycombinator.com/item?id=50541568",
+        "score": 212,
+        "comments": 131,
+        "published": "2026-11-18",
+        "by": "brianrhea"
+      },
+      {
+        "source": "hn_show",
+        "title": "Show HN: Pencil – LLM writes whiteboard lessons as JSON, a browser draws them",
+        "url": "https://news.ycombinator.com/item?id=50592137",
+        "score": 2,
+        "comments": 0,
+        "published": "2026-11-21",
+        "by": "VBS2004"
+      },
+      {
+        "source": "hn_show",
+        "title": "Show HN: I made a PS1 style racing game",
+        "url": "https://news.ycombinator.com/item?id=50589184",
+        "score": 15,
+        "comments": 6,
+        "published": "2026-11-21",
+        "by": "shash7"
+      },
+      {
+        "source": "hn_show",
         "title": "Show HN: I made an audio-to-MIDI model 60x more efficient",
         "url": "https://news.ycombinator.com/item?id=50526023",
-        "score": 195,
-        "comments": 36,
+        "score": 294,
+        "comments": 65,
         "published": "2026-11-17",
         "by": "hidude562"
-      },
-      {
-        "source": "hn_show",
-        "title": "Show HN: OpenComputer – an open source alternative to Devin",
-        "url": "https://news.ycombinator.com/item?id=50581403",
-        "score": 5,
-        "comments": 0,
-        "published": "2026-11-20",
-        "by": "iacguy"
-      },
-      {
-        "source": "hn_show",
-        "title": "Show HN: Fast deterministic natural language search for OpenStreetMap data",
-        "url": "https://news.ycombinator.com/item?id=50561199",
-        "score": 114,
-        "comments": 32,
-        "published": "2026-11-19",
-        "by": "vihren"
-      },
-      {
-        "source": "hn_show",
-        "title": "Show HN: A browser game about trying to join a meeting",
-        "url": "https://news.ycombinator.com/item?id=50581030",
-        "score": 2,
-        "comments": 0,
-        "published": "2026-11-20",
-        "by": "macNchz"
-      },
-      {
-        "source": "hn_show",
-        "title": "Show HN: Prefixwise 0.12 – a paper and a spec for why prompt caches miss",
-        "url": "https://news.ycombinator.com/item?id=50581015",
-        "score": 2,
-        "comments": 0,
-        "published": "2026-11-20",
-        "by": "tchavali"
-      },
-      {
-        "source": "hn_show",
-        "title": "Show HN: ArkViz – AI generated software architecture diagrams",
-        "url": "https://news.ycombinator.com/item?id=50580994",
-        "score": 2,
-        "comments": 0,
-        "published": "2026-11-20",
-        "by": "bofia"
       }
     ],
     "seobox": {
