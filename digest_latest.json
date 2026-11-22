@@ -1,106 +1,112 @@
 {
-  "date": "2026-11-22",
-  "fetched_at": "2026-11-22T04:45:29+08:00",
+  "date": "2026-11-23",
+  "fetched_at": "2026-11-23T04:45:41+08:00",
   "limit_per_site": 6,
   "sources": {
     "producthunt": [
       {
         "source": "producthunt",
-        "title": "Doddle",
-        "url": "https://www.producthunt.com/products/doddle-3",
-        "desc": "",
-        "published": ""
+        "title": "TeaserKit",
+        "url": "https://www.producthunt.com/products/teaserkit",
+        "desc": "your coding agent directs your launch video",
+        "published": "2026-11-19"
       },
       {
         "source": "producthunt",
-        "title": "AlterContacts",
-        "url": "https://www.producthunt.com/products/alter-contacts-ai-client-relationships",
-        "desc": "",
-        "published": ""
+        "title": "Mockreel",
+        "url": "https://www.producthunt.com/products/mockreel",
+        "desc": "your screen recording, but in a 3D phone. free, no signup",
+        "published": "2026-11-19"
       },
       {
         "source": "producthunt",
-        "title": "Beat Watcher",
-        "url": "https://www.producthunt.com/products/beat-watcher",
-        "desc": "",
-        "published": ""
+        "title": "Creavit Studio 4.0",
+        "url": "https://www.producthunt.com/products/creavit-studio",
+        "desc": "Screen recording, iPhone camera and cinematic demos for Mac",
+        "published": "2026-11-20"
       },
       {
         "source": "producthunt",
-        "title": "Exa Websets V2",
-        "url": "https://www.producthunt.com/products/exa-ai",
-        "desc": "",
-        "published": ""
+        "title": "Webless Agents",
+        "url": "https://www.producthunt.com/products/webless",
+        "desc": "Agents you want to put in front of customers",
+        "published": "2026-11-06"
       },
       {
         "source": "producthunt",
-        "title": "Glassmail",
-        "url": "https://www.producthunt.com/products/glassmail",
-        "desc": "",
-        "published": ""
+        "title": "Yoroll",
+        "url": "https://www.producthunt.com/products/yoroll",
+        "desc": "Build playable stories without a game engine",
+        "published": "2026-11-05"
       },
       {
         "source": "producthunt",
-        "title": "Shipyard",
-        "url": "https://www.producthunt.com/products/shipyard",
-        "desc": "",
-        "published": ""
+        "title": "Leapdeck",
+        "url": "https://www.producthunt.com/products/leapdeck",
+        "desc": "Leap to any Mac Space from a key or your iPhone",
+        "published": "2026-11-16"
       }
     ],
     "hn_show": [
       {
         "source": "hn_show",
-        "title": "Show HN: Zero C# – C# without a runtime or GC",
-        "url": "https://news.ycombinator.com/item?id=50590279",
-        "score": 86,
-        "comments": 63,
-        "published": "2026-11-21",
-        "by": "reverseblade2"
+        "title": "Show HN: I built a game where you are an LLM's subagent",
+        "url": "https://news.ycombinator.com/item?id=50599762",
+        "score": 214,
+        "comments": 52,
+        "published": "2026-11-22",
+        "by": "ivantgam",
+        "desc": ""
       },
       {
         "source": "hn_show",
-        "title": "Show HN: An ASCII cell aquarium for your terminal",
-        "url": "https://news.ycombinator.com/item?id=50541047",
-        "score": 32,
-        "comments": 12,
-        "published": "2026-11-18",
-        "by": "kborer"
+        "title": "Show HN: Deflate X-Ray, See inside a compressed file",
+        "url": "https://news.ycombinator.com/item?id=50572389",
+        "score": 5,
+        "comments": 1,
+        "published": "2026-11-20",
+        "by": "DonAtimator",
+        "desc": ""
       },
       {
         "source": "hn_show",
-        "title": "Show HN: Tinnitus frequency finder and audio notch tool",
-        "url": "https://news.ycombinator.com/item?id=50541568",
-        "score": 212,
-        "comments": 131,
-        "published": "2026-11-18",
-        "by": "brianrhea"
-      },
-      {
-        "source": "hn_show",
-        "title": "Show HN: Pencil – LLM writes whiteboard lessons as JSON, a browser draws them",
-        "url": "https://news.ycombinator.com/item?id=50592137",
+        "title": "Show HN: PDF ProMaster – PDF tools that run in the browser, no uploads",
+        "url": "https://news.ycombinator.com/item?id=50603380",
         "score": 2,
         "comments": 0,
-        "published": "2026-11-21",
-        "by": "VBS2004"
+        "published": "2026-11-22",
+        "by": "pdfpromaster",
+        "desc": ""
       },
       {
         "source": "hn_show",
-        "title": "Show HN: I made a PS1 style racing game",
-        "url": "https://news.ycombinator.com/item?id=50589184",
-        "score": 15,
-        "comments": 6,
+        "title": "Show HN: Zero C# – C# without a runtime or GC",
+        "url": "https://news.ycombinator.com/item?id=50590279",
+        "score": 172,
+        "comments": 120,
         "published": "2026-11-21",
-        "by": "shash7"
+        "by": "reverseblade2",
+        "desc": ""
       },
       {
         "source": "hn_show",
-        "title": "Show HN: I made an audio-to-MIDI model 60x more efficient",
-        "url": "https://news.ycombinator.com/item?id=50526023",
-        "score": 294,
-        "comments": 65,
-        "published": "2026-11-17",
-        "by": "hidude562"
+        "title": "Show HN: TEB RUN – a pseudo-3D arcade racer in TypeScript and Canvas, no engine",
+        "url": "https://news.ycombinator.com/item?id=50601492",
+        "score": 3,
+        "comments": 0,
+        "published": "2026-11-22",
+        "by": "tebrun",
+        "desc": ""
+      },
+      {
+        "source": "hn_show",
+        "title": "Show HN: The Riemann Proof Handbook",
+        "url": "https://news.ycombinator.com/item?id=50596664",
+        "score": 82,
+        "comments": 57,
+        "published": "2026-11-22",
+        "by": "tamnd",
+        "desc": ""
       }
     ],
     "seobox": {
