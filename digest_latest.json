@@ -1,111 +1,111 @@
 {
-  "date": "2026-11-23",
-  "fetched_at": "2026-11-23T04:45:41+08:00",
+  "date": "2026-11-24",
+  "fetched_at": "2026-11-24T06:36:25+08:00",
   "limit_per_site": 6,
   "sources": {
     "producthunt": [
       {
         "source": "producthunt",
-        "title": "TeaserKit",
-        "url": "https://www.producthunt.com/products/teaserkit",
-        "desc": "your coding agent directs your launch video",
-        "published": "2026-11-19"
+        "title": "Motionflare",
+        "url": "https://www.producthunt.com/products/motionflare",
+        "desc": "Turn your website into a stunning launch video in minutes",
+        "published": "2026-11-14"
       },
       {
         "source": "producthunt",
-        "title": "Mockreel",
-        "url": "https://www.producthunt.com/products/mockreel",
-        "desc": "your screen recording, but in a 3D phone. free, no signup",
-        "published": "2026-11-19"
-      },
-      {
-        "source": "producthunt",
-        "title": "Creavit Studio 4.0",
-        "url": "https://www.producthunt.com/products/creavit-studio",
-        "desc": "Screen recording, iPhone camera and cinematic demos for Mac",
+        "title": "Gauth Personal Study Agent",
+        "url": "https://www.producthunt.com/products/gauth-ai-course",
+        "desc": "An AI study agent that remembers where you struggle",
         "published": "2026-11-20"
       },
       {
         "source": "producthunt",
-        "title": "Webless Agents",
-        "url": "https://www.producthunt.com/products/webless",
-        "desc": "Agents you want to put in front of customers",
-        "published": "2026-11-06"
+        "title": "Chat with Work",
+        "url": "https://www.producthunt.com/products/chat-with-work",
+        "desc": "AI bots in Europe. They work. You decide.",
+        "published": "2026-11-21"
       },
       {
         "source": "producthunt",
-        "title": "Yoroll",
-        "url": "https://www.producthunt.com/products/yoroll",
-        "desc": "Build playable stories without a game engine",
-        "published": "2026-11-05"
+        "title": "LeanTake",
+        "url": "https://www.producthunt.com/products/leantake",
+        "desc": "4.1 MB native Mac screen recorder — zero export wait",
+        "published": "2026-11-22"
       },
       {
         "source": "producthunt",
-        "title": "Leapdeck",
-        "url": "https://www.producthunt.com/products/leapdeck",
-        "desc": "Leap to any Mac Space from a key or your iPhone",
-        "published": "2026-11-16"
+        "title": "Omi Work",
+        "url": "https://www.producthunt.com/products/omi-work",
+        "desc": "Omi can build anything. Now it finds your next 100 customers",
+        "published": "2026-11-22"
+      },
+      {
+        "source": "producthunt",
+        "title": "naturefunding.org",
+        "url": "https://www.producthunt.com/products/naturefunding-org",
+        "desc": "Grants for nature projects, checked against funder pages",
+        "published": "2026-11-18"
       }
     ],
     "hn_show": [
       {
         "source": "hn_show",
-        "title": "Show HN: I built a game where you are an LLM's subagent",
-        "url": "https://news.ycombinator.com/item?id=50599762",
-        "score": 214,
-        "comments": 52,
-        "published": "2026-11-22",
-        "by": "ivantgam",
-        "desc": ""
-      },
-      {
-        "source": "hn_show",
-        "title": "Show HN: Deflate X-Ray, See inside a compressed file",
-        "url": "https://news.ycombinator.com/item?id=50572389",
+        "title": "Show HN: Type-C – variants, options, generics and pattern matching for C",
+        "url": "https://news.ycombinator.com/item?id=50602561",
         "score": 5,
-        "comments": 1,
-        "published": "2026-11-20",
-        "by": "DonAtimator",
-        "desc": ""
+        "comments": 0,
+        "published": "2026-11-22",
+        "by": "stass",
+        "desc": "I love C, but often using it for parsing, tree walking or complex error handling leads to spaghetti code. Of course there is Swift, Ocaml or Rust for situations like that, but then you are either forc"
       },
       {
         "source": "hn_show",
-        "title": "Show HN: PDF ProMaster – PDF tools that run in the browser, no uploads",
-        "url": "https://news.ycombinator.com/item?id=50603380",
+        "title": "Show HN: Drive around my village in 3D",
+        "url": "https://news.ycombinator.com/item?id=50574412",
+        "score": 95,
+        "comments": 67,
+        "published": "2026-11-20",
+        "by": "johnwards",
+        "desc": "So this started out just over a week ago, could I drive around my village in my old car on the web, and its expanded into a massive map, with races, events, different cars and multiplayer. I'm a web/a"
+      },
+      {
+        "source": "hn_show",
+        "title": "Show HN: Hermit CRM – Free open-source CRM for solopreneurs",
+        "url": "https://news.ycombinator.com/item?id=50609708",
+        "score": 15,
+        "comments": 2,
+        "published": "2026-11-23",
+        "by": "gijsbos",
+        "desc": "I was about to keep track of my clients and prospecting in Google Sheets for my solopreneur business, when I remembered that's exactly what I advise my clients not to do. Created Hermit CRM, an open s"
+      },
+      {
+        "source": "hn_show",
+        "title": "Show HN: Narayanastra – agentless Linux rootkit scanner (eBPF, io_uring) in Rust",
+        "url": "https://news.ycombinator.com/item?id=50618581",
         "score": 2,
         "comments": 0,
-        "published": "2026-11-22",
-        "by": "pdfpromaster",
+        "published": "2026-11-23",
+        "by": "cyberhx",
         "desc": ""
       },
       {
         "source": "hn_show",
-        "title": "Show HN: Zero C# – C# without a runtime or GC",
-        "url": "https://news.ycombinator.com/item?id=50590279",
-        "score": 172,
-        "comments": 120,
-        "published": "2026-11-21",
-        "by": "reverseblade2",
-        "desc": ""
-      },
-      {
-        "source": "hn_show",
-        "title": "Show HN: TEB RUN – a pseudo-3D arcade racer in TypeScript and Canvas, no engine",
-        "url": "https://news.ycombinator.com/item?id=50601492",
+        "title": "Show HN: My computer was too slow to run this Flash game, so I decompiled it",
+        "url": "https://news.ycombinator.com/item?id=50620027",
         "score": 3,
-        "comments": 0,
-        "published": "2026-11-22",
-        "by": "tebrun",
-        "desc": ""
+        "comments": 2,
+        "published": "2026-11-23",
+        "by": "andai",
+        "desc": "Hi HN. I have potato computer. I tried running this flash game (N, the way of the ninja!) from 2004 (!), but my laptop from 2016 struggled to run it (yes, even with official Flashplayer!). I don't kno"
       },
       {
         "source": "hn_show",
-        "title": "Show HN: The Riemann Proof Handbook",
-        "url": "https://news.ycombinator.com/item?id=50596664",
-        "score": 82,
-        "comments": 57,
-        "published": "2026-11-22",
-        "by": "tamnd",
+        "title": "Show HN: Mistfall – a free Mac screen saver inspired by Syntrillium's Snoqualmie",
+        "url": "https://news.ycombinator.com/item?id=50617167",
+        "score": 2,
+        "comments": 1,
+        "published": "2026-11-23",
+        "by": "gbtk",
         "desc": ""
       }
     ],
